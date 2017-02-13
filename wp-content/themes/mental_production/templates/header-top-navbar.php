@@ -1,5 +1,5 @@
-<header class="banner navbar navbar-default navbar-fixed-top" role="banner">
-  <div class="container">
+<header class="banner navbar navbar-default" role="banner">
+  <div class="container hidden-xs hidden-sm hidden-md hidden-lg">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
@@ -12,6 +12,9 @@
     </div>
   </div>
   <div class="nav-container">
+  	<div class="site_logo_container">
+	  	<a href="<?php echo home_url(); ?>/"><img src="<?=get_stylesheet_directory_uri()?>/assets/img/logo_mp.png" class="img-responsive"></a>
+	</div>
     <nav class="collapse navbar-collapse main-menu" role="navigation">
         <?php
             //Main menu

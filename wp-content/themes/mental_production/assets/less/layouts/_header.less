@@ -1,1 +1,37 @@
 .banner { }
+header{
+	position: fixed!important;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 220px;
+	padding: 30px 30px 15px;
+	z-index: 8000;
+	-webkit-transition: background-color .8s, background-image .8s;
+	-moz-transition: background-color .8s, background-image .8s;
+	-o-transition: background-color .8s, background-image .8s;
+	transition: background-color .8s, background-image .8s;
+	
+	&.navbar{
+		margin-bottom:0;
+		border-radius:0;
+	}
+	
+	&.navbar-default{
+		background-color: #FFBA2F;
+		border:none;
+	}
+	
+	.site_logo_container{
+		width:100%;
+		text-align:center;
+		padding-bottom:50px;
+		
+		a{
+			display:inline-block;
+			img{
+				max-width:100%;
+			}
+		}
+	}
+}

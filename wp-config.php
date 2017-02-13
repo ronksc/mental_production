@@ -16,19 +16,37 @@
 
 // ** MySQL 設定 - 您可以從主機服務提供商獲取相關資訊。 ** //
 /** WordPress 的資料庫名稱，請更改 "database_name_here" */
-define('DB_NAME', 'mental_production');
 
-/** MySQL 資料庫使用者名稱，請更改 "username_here" */
-define('DB_USER', 'root');
-
-/** MySQL 資料庫密碼，請更改 "password_here" */
-define('DB_PASSWORD', 'root');
+if ($_SERVER['SERVER_NAME'] == "local.mental-production.com") {
+	define('DB_NAME', 'mental_production');
+	
+	/** MySQL 資料庫使用者名稱，請更改 "username_here" */
+	define('DB_USER', 'root');
+	
+	/** MySQL 資料庫密碼，請更改 "password_here" */
+	define('DB_PASSWORD', 'root');
+	
+	define( 'WP_SITEURL',  'http://local.mental-production.com' );
+	define( 'WP_HOME', 'http://local.mental-production.com' );
+	
+}else if($_SERVER['SERVER_NAME'] == "mental_production.fp-production.com"){
+	define('DB_NAME', 'fpproducti_mentalproduction');
+	
+	/** MySQL 資料庫使用者名稱，請更改 "username_here" */
+	define('DB_USER', 'fpproducti_root');
+	
+	/** MySQL 資料庫密碼，請更改 "password_here" */
+	define('DB_PASSWORD', 'P@ssw0rd');
+	
+	define( 'WP_SITEURL',  'http://mental_production.fp-production.com' );
+	define( 'WP_HOME', 'http://mental_production.fp-production.com' );
+}
 
 /** MySQL 主機位址 */
 define('DB_HOST', 'localhost');
 
 /** 建立資料表時預設的文字編碼 */
-define('DB_CHARSET', 'utf8');
+define('DB_CHARSET', 'utf8mb4');
 
 /** 資料庫對照型態。如果不確定請勿更改。 */
 define('DB_COLLATE', 'utf8_unicode_ci');
@@ -42,14 +60,14 @@ define('DB_COLLATE', 'utf8_unicode_ci');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'PRijCPYYhB(T5|eL 7A8E9nLiSwSfu(qU/Y=2#V-0!efGI8A5ymuydkTh0_Rz|Ik');
-define('SECURE_AUTH_KEY',  'W][SROVdLR oY-@5[,)M]B_!%yNSzE{:2E=WwNJa@kIn-R1[,,};[,m9mX-{6>N*');
-define('LOGGED_IN_KEY',    '}{|TLl~rc:O07Iwmi-<BO4:C#.b,MjVY-Wd)D|-$bMvWm(|v^,}8Bu+hN8U;]5/g');
-define('NONCE_KEY',        'nIK9zto@Tsb#N:eo56G^/$8|D[0qCcKzup~G|WfP!]*JcYu0ZY<5#|9ai4ESiH-6');
-define('AUTH_SALT',        '8o9f&{G|QD^/_`=_w!O!@{%y|<u>+,_~@B?#<B`9hYTmW(.~|=<JH-_*`0A%H?,q');
-define('SECURE_AUTH_SALT', 'Z&HRd.Vcg=F?q1,YxzfL}dYiImI,6dpnH.EAAL(fZ`iE^B-hRE;2L;fI]96%Ps@4');
-define('LOGGED_IN_SALT',   'UP&Zzd,2>6rG=}GlZUbBZJb||-N#QgHRfU>ozwF] VxAh)cLKhVCQ~9-1G`4lezU');
-define('NONCE_SALT',       '5HD^keg#$OGe{!XZ5~g/8l`Bq.g5nIDzQawVYOug0n%_V9/dtI)GYw-[.cyN@0oY');
+define('AUTH_KEY',         ')H`V;5sEpA[R5OVt2#-M?B=)J(Zc&XD=|/1fX(Kzz;l&:B=&C;(30g;nEu%Hii0K');
+define('SECURE_AUTH_KEY',  'sq( `i4V!vS18LrnnZ=NExUZt^]HnNt&Pw@t.2p*(Ie}Ny-:2axN1T4;[YiOx.c/');
+define('LOGGED_IN_KEY',    'TMMu7]y6TA~f1wYG$g`rF/(bE^NYSNC<V>Hxd%|NS]ovu#A=2J,ab*,JlJinD<]x');
+define('NONCE_KEY',        'f#dmExFL&HSj#_3kJ?RYkc>.4*thufl)|^35Q=J>AOwMGCy.ShosPz&_*$Hxh& d');
+define('AUTH_SALT',        '*t;WwaJ4rJ3vB,=@.TJ0pfbo/GLTS>Is? 3*c>SRMOA)Q%:V P:Rd[Gye-OP~![k');
+define('SECURE_AUTH_SALT', '0#*51{@Xi*+O7x+U#9/buv{OT`k@AGmlrFu--(UtsDo& 1#A1C%{  n-cs.&.<gr');
+define('LOGGED_IN_SALT',   ',:NP?jpZ4usalLrfoQ!Q6S:rJVbI99DH<[ic F{7:{ Jb1n_}YG.eB&g*J-CPGGP');
+define('NONCE_SALT',       '0nOvJEGEtq:99v#AT$_,:US[nu4k+l7jaSJzHZ#m)Yq=PUZ=&cm)[)iDYt0.0:Cg');
 
 /**#@-*/
 
@@ -102,7 +120,10 @@ $table_prefix  = 'wp_';
  * 強烈建議外掛與佈景主題開發人員使用 WP_DEBUG
  * 於他們的開發環境中。
  */
+
 define('WP_DEBUG', false);
+
+define('WP_ENV', 'development');
 
 /* 設定完成，請儲存檔案。然後開始 Blogging 吧！ */
 

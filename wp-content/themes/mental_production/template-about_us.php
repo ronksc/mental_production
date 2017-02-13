@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Home
+Template Name: About us
 */
 ?>
-<?php get_template_part('templates/content', 'home'); ?>
+<?php get_template_part('templates/content', 'about_us'); ?>
