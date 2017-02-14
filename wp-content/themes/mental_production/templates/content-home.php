@@ -1,3 +1,3 @@
-<div class="project_grid_container" style="padding-left:220px;">
+<div class="project_grid_container">
 	This is project grid
 </div>
