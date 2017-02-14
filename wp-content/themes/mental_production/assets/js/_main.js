@@ -29,6 +29,25 @@ var Roots = {
   home: {
     init: function() {
       // JavaScript to be fired on the home page
+	  $(document).ready(function(){
+		var container = $('#project_grid');
+	 
+		container.isotope({
+			itemSelector: '.grid_item',
+			percentPosition: true,
+			masonry:{
+				columnWidth: container.find('.grid_item').not('.wide').get(0),
+			}
+		});
+			 
+		container.imagesLoaded().progress( function() {
+			container.isotope('layout');
+		});
+		
+		$(window).resize(function(){
+			container.isotope('layout');						  
+		});
+	  });
     }
   },
   // About us page, note the change from about-us to about_us.
