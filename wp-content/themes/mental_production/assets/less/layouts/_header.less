@@ -26,13 +26,34 @@ header{
 		& > li{
 			float:none;
 			display:block;
+			padding-bottom:25px;
 			
 			& > a{
 				font-size: 13px;
-				line-height: 25px;
+				//line-height: 40px;
 				text-transform: uppercase;
 				padding:0;
 				color:#000!important;
+				display:inline-block;
+				position:relative;
+				transition: all 0.2s ease-in-out;
+				
+				&:after{
+					content:"";
+					position:absolute;
+					width:0;
+					height:1px;
+					background:#000;
+					left:0;
+					bottom:0;
+					transition: all 0.2s ease-in-out;
+				}
+				
+				&:hover{
+					&:after{
+						width:100%;
+					}
+				}
 			}
 		}
 	}
