@@ -29,8 +29,18 @@ var Roots = {
   home: {
     init: function() {
       // JavaScript to be fired on the home page
+	  function showHidePopup(){
+		  $('.overlay_link').click(function(){
+			  console.log('haha');
+			  $('#project_popup').fadeIn();
+			  $('body').addClass('popup_enable');
+		  });
+	  }
+	  
 	  $(document).ready(function(){
 		var container = $('#project_grid');
+		
+		showHidePopup();
 	 
 		container.isotope({
 			itemSelector: '.grid_item',
