@@ -31,9 +31,13 @@ var Roots = {
       // JavaScript to be fired on the home page
 	  function showHidePopup(){
 		  $('.overlay_link').click(function(){
-			  console.log('haha');
 			  $('#project_popup').fadeIn();
 			  $('body').addClass('popup_enable');
+		  });
+		  
+		  $('.mfp-close').click(function(){
+			  $('#project_popup').fadeOut();
+			  $('body').removeClass('popup_enable');
 		  });
 	  }
 	  

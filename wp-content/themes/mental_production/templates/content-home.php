@@ -159,6 +159,7 @@
 </div>
 <div id="project_popup">
   <div class="pj_wrapper">
+  	<button title="Close (Esc)" type="button" class="mfp-close">×</button>
     <div class="portfolio-media" style="height: auto">
       <div class="media-content">
         <div class="video-frame">
@@ -173,12 +174,9 @@
             <div class="heading">
               <h3 class="title">DREAMS</h3>
               <p class="skills">Photography</p>
-              <a href="#" class="share a2a_dd">SHARE</a></div>
+			</div>
             <div class="content">
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-              <div class="addtoany_share_save_container addtoany_content_bottom">
-                <div class="a2a_kit a2a_kit_size_32 addtoany_list a2a_target" id="wpa2a_1"><a class="a2a_button_facebook" href="http://www.addtoany.com/add_to/facebook?linkurl=http%3A%2F%2Fdemo3.pixflow.net%2Flightbox%2Fportfolios%2Fdreams%2F&amp;linkname=DREAMS" title="Facebook" rel="nofollow" target="_blank"></a><a class="a2a_button_twitter" href="http://www.addtoany.com/add_to/twitter?linkurl=http%3A%2F%2Fdemo3.pixflow.net%2Flightbox%2Fportfolios%2Fdreams%2F&amp;linkname=DREAMS" title="Twitter" rel="nofollow" target="_blank"></a><a class="a2a_button_google_plus" href="http://www.addtoany.com/add_to/google_plus?linkurl=http%3A%2F%2Fdemo3.pixflow.net%2Flightbox%2Fportfolios%2Fdreams%2F&amp;linkname=DREAMS" title="Google+" rel="nofollow" target="_blank"></a><a class="a2a_dd addtoany_no_icon addtoany_share_save" href="https://www.addtoany.com/share">Share</a><script type="text/javascript">if(wpa2a)wpa2a.script_load();</script><script type="text/javascript">if(wpa2a.targets)wpa2a.targets.push({title:"DREAMS",url:"http://demo3.pixflow.net/lightbox/portfolios/dreams/"});if('function'===typeof(jQuery))jQuery(document).ready(function($){$('body').on('post-load',function(){if(wpa2a.script_ready)wpa2a.init();wpa2a.script_load();});});</script></div>
-              </div>
             </div>
           </div>
         </div>
@@ -195,7 +193,7 @@
         <div class="title">Related Entries</div>
         <div class="item">
           <div class="item-image">
-            <div class="related-thumb" style="background-image: url(&quot;http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/1212-1406801270-270x200.jpg&quot;); position: relative;"></div>
+            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/1212-1406801270-270x200.jpg'); position: relative;"></div>
             <div class="image-overlay"></div>
           </div>
           <div class="related-info" style="bottom: -56px;">
@@ -209,7 +207,7 @@
         </div>
         <div class="item">
           <div class="item-image">
-            <div class="related-thumb" style="background-image: url(&quot;http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2015/01/SvRQ8dp5ZlGzi4Ek-270x200.jpg&quot;); position: relative;"></div>
+            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2015/01/SvRQ8dp5ZlGzi4Ek-270x200.jpg'); position: relative;"></div>
             <div class="image-overlay"></div>
           </div>
           <div class="related-info" style="bottom: -56px;">
@@ -223,7 +221,7 @@
         </div>
         <div class="item">
           <div class="item-image">
-            <div class="related-thumb" style="background-image: url(&quot;http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/Thisispaper_Gardening-38a-270x200.jpg&quot;); position: relative;"></div>
+            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/Thisispaper_Gardening-38a-270x200.jpg'); position: relative;"></div>
             <div class="image-overlay"></div>
           </div>
           <div class="related-info" style="bottom: -56px;">
@@ -237,7 +235,7 @@
         </div>
         <div class="item">
           <div class="item-image">
-            <div class="related-thumb" style="background-image: url(&quot;http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2015/01/O0brja5Qx6VXR9fA-270x200.jpg&quot;); position: relative;"></div>
+            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2015/01/O0brja5Qx6VXR9fA-270x200.jpg'); position: relative;"></div>
             <div class="image-overlay"></div>
           </div>
           <div class="related-info" style="bottom: -56px;">
@@ -251,7 +249,7 @@
         </div>
         <div class="item">
           <div class="item-image">
-            <div class="related-thumb" style="background-image: url(&quot;http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2015/01/2523-270x200.jpg&quot;); position: relative;"></div>
+            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2015/01/2523-270x200.jpg'); position: relative;"></div>
             <div class="image-overlay"></div>
           </div>
           <div class="related-info" style="bottom: -56px;">
@@ -265,7 +263,7 @@
         </div>
         <div class="item">
           <div class="item-image">
-            <div class="related-thumb" style="background-image: url(&quot;http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/2545-270x200.jpg&quot;); position: relative;"></div>
+            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/2545-270x200.jpg'); position: relative;"></div>
             <div class="image-overlay"></div>
           </div>
           <div class="related-info" style="bottom: -56px;">
@@ -279,7 +277,7 @@
         </div>
         <div class="item">
           <div class="item-image">
-            <div class="related-thumb" style="background-image: url(&quot;http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2015/01/9e7b5b38901dd20febbaee11c55296ce-270x200.jpg&quot;); position: relative;"></div>
+            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2015/01/9e7b5b38901dd20febbaee11c55296ce-270x200.jpg'); position: relative;"></div>
             <div class="image-overlay"></div>
           </div>
           <div class="related-info" style="bottom: -56px;">
@@ -293,7 +291,7 @@
         </div>
         <div class="item">
           <div class="item-image">
-            <div class="related-thumb" style="background-image: url(&quot;http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2015/01/Vishesh_Verma_02-270x200.jpg&quot;); position: relative;"></div>
+            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2015/01/Vishesh_Verma_02-270x200.jpg'); position: relative;"></div>
             <div class="image-overlay"></div>
           </div>
           <div class="related-info" style="bottom: -56px;">
@@ -307,7 +305,7 @@
         </div>
         <div class="item">
           <div class="item-image">
-            <div class="related-thumb" style="background-image: url(&quot;http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/42-270x200.jpg&quot;); position: relative;"></div>
+            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/42-270x200.jpg'); position: relative;"></div>
             <div class="image-overlay"></div>
           </div>
           <div class="related-info" style="bottom: -56px;">
@@ -321,7 +319,7 @@
         </div>
         <div class="item">
           <div class="item-image">
-            <div class="related-thumb" style="background-image: url(&quot;http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2015/01/colaj-270x200.jpg&quot;); position: relative;"></div>
+            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2015/01/colaj-270x200.jpg'); position: relative;"></div>
             <div class="image-overlay"></div>
           </div>
           <div class="related-info" style="bottom: -56px;">
@@ -335,7 +333,7 @@
         </div>
         <div class="item">
           <div class="item-image">
-            <div class="related-thumb" style="background-image: url(&quot;http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/another-country-stool-one-oak-natural-009_4d1250e9-33c7-4703-ba67-4d9c743b5496-270x200.jpeg&quot;); position: relative;"></div>
+            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/another-country-stool-one-oak-natural-009_4d1250e9-33c7-4703-ba67-4d9c743b5496-270x200.jpeg'); position: relative;"></div>
             <div class="image-overlay"></div>
           </div>
           <div class="related-info" style="bottom: -56px;">
@@ -349,7 +347,7 @@
         </div>
         <div class="item">
           <div class="item-image">
-            <div class="related-thumb" style="background-image: url(&quot;http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/AOZzHabmM3ToEN2g-270x200.jpg&quot;); position: relative;"></div>
+            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/AOZzHabmM3ToEN2g-270x200.jpg'); position: relative;"></div>
             <div class="image-overlay"></div>
           </div>
           <div class="related-info" style="bottom: -56px;">
@@ -363,7 +361,7 @@
         </div>
         <div class="item">
           <div class="item-image">
-            <div class="related-thumb" style="background-image: url(&quot;http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/y5y61-270x200.jpg&quot;); position: relative;"></div>
+            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/y5y61-270x200.jpg'); position: relative;"></div>
             <div class="image-overlay"></div>
           </div>
           <div class="related-info" style="bottom: -56px;">
@@ -377,7 +375,7 @@
         </div>
         <div class="item">
           <div class="item-image">
-            <div class="related-thumb" style="background-image: url(&quot;http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/TC_ecoBag1-270x200.png&quot;); position: relative;"></div>
+            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/TC_ecoBag1-270x200.png'); position: relative;"></div>
             <div class="image-overlay"></div>
           </div>
           <div class="related-info" style="bottom: -56px;">
