@@ -26,7 +26,7 @@ function portfolio_register() {
       'capability_type' => 'post',
       'hierarchical' => true,
       'menu_position' => 20,
-      'supports'      => array( 'title', 'editor', 'page-attributes'),
+      'supports'      => array( 'title', 'editor', 'page-attributes', 'thumbnail'),
   );
   register_post_type( 'portfolio' , $args );
 }

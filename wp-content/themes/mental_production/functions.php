@@ -32,4 +32,14 @@ foreach ($roots_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+function my_acf_google_map_api( $api ){
+	
+	$api['key'] = 'AIzaSyC9JVu4-UO7s-jqLpqCDn3OL3EiwvVFFL4';
+	
+	return $api;
+	
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 ?>

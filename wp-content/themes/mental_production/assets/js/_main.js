@@ -30,7 +30,8 @@ var Roots = {
     init: function() {
       // JavaScript to be fired on the home page
 	  function showHidePopup(){
-		  $('.overlay_link').click(function(){
+		  $('.overlay_link').click(function(event){
+			  event.preventDefault();
 			  $('#project_popup').fadeIn();
 			  $('body').addClass('popup_enable');
 		  });
