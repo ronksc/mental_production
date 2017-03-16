@@ -3,68 +3,79 @@
 // Base
 //===============================================================================
 //===============================================================================
+
 .page-template-template-about_us{
-	color: #858585; 
-	font-size: 14px;
-	
-	p{
-		margin-bottom:15px;
-	}
-	
-	h6{
-		color:#2f2f2f;
-		position:relative;
-		font-size: 20px;
-		font-weight:bold;
-		text-transform:uppercase;
+	.about_content{
+		color: #858585; 
+		font-size: 14px;
 		
-		&:after{
-			position:relative;
-			content:"";
-			background:#ffb700;
-			margin-bottom: 11px;
-			margin-top: 3px;
-			width: 20px;
-			height: 5px;
-			display:block;
+		p{
+			margin-bottom:15px;
 		}
-	}
-	
-	ul,ol{
-		li{
-			margin-bottom:5px;
-			&:last-child{
-				margin-bottom:0;
-			}
-		}
-	}
-	
-	ol{
-		padding-left:15px;
-	}
-	
-	ul{
-		padding-left:0;
-		li{
-			list-style:none;
+		
+		h6{
+			color:#2f2f2f;
 			position:relative;
-			padding-left:10px;
-			&:before{
-				content:"";
-				position:absolute;
-				width:5px;
-				height:1px;
-				background:#ffb700;
-				display:block;
-				left:0;
-				top:50%;
-				transform:translateY(-50%);
-			}
+			font-size: 20px;
+			font-weight:bold;
+			text-transform:uppercase;
 			
-			strong{
-				padding-right:5px;
+			&:after{
+				position:relative;
+				content:"";
+				background:#ffb700;
+				margin-bottom: 11px;
+				margin-top: 3px;
+				width: 20px;
+				height: 5px;
+				display:block;
 			}
 		}
+		
+		ul,ol{
+			li{
+				margin-bottom:5px;
+				&:last-child{
+					margin-bottom:0;
+				}
+			}
+		}
+		
+		ol{
+			padding-left:15px;
+		}
+		
+		ul{
+			padding-left:0;
+			li{
+				list-style:none;
+				position:relative;
+				padding-left:10px;
+				&:before{
+					content:"";
+					position:absolute;
+					width:5px;
+					height:1px;
+					background:#ffb700;
+					display:block;
+					left:0;
+					top:50%;
+					transform:translateY(-50%);
+				}
+				
+				strong{
+					padding-right:5px;
+				}
+			}
+		}
+	}
+	
+	.img-container{
+		margin-bottom:20px;
+	}
+	
+	.container_bg{
+		background-size: 0 0;
 	}
 }
 
@@ -83,7 +94,28 @@
 //===============================================================================
 //===============================================================================
 @media (min-width: @screen-md-min) {
-
+	.page-template-template-about_us{
+		.container-fluid{
+			padding:0;
+		}
+		
+		header{
+			&.navbar-default{
+				background:url(../img/header-gradient-dark.png) repeat-y rgba(0,0,0,0)!important;
+			}
+		}
+	
+		.container_bg{
+			background-size:cover; 
+			background-repeat:no-repeat;
+		}
+		
+		.about_content{
+			margin-left:40%; 
+			background:#fff; 
+			padding:40px 45px;
+		}
+	}
 }
 
 //===============================================================================
