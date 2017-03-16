@@ -1,17 +1,10 @@
-.banner { }
+//===============================================================================
+//===============================================================================
+// Base
+//===============================================================================
+//===============================================================================
+
 header{
-	position: fixed!important;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	width: 220px;
-	padding: 30px 30px 15px;
-	z-index: 1000;
-	-webkit-transition: background-color .8s, background-image .8s;
-	-moz-transition: background-color .8s, background-image .8s;
-	-o-transition: background-color .8s, background-image .8s;
-	transition: background-color .8s, background-image .8s;
-	
 	&.navbar{
 		margin-bottom:0;
 		border-radius:0;
@@ -22,52 +15,163 @@ header{
 		border:none;
 	}
 	
-	.navbar-nav{
-		& > li{
-			float:none;
-			display:block;
-			padding-bottom:25px;
-			
-			& > a{
-				font-size: 13px;
-				//line-height: 40px;
-				text-transform: uppercase;
-				padding:0;
-				color:#000!important;
-				display:inline-block;
-				position:relative;
-				transition: all 0.2s ease-in-out;
+	.navbar-brand{
+		max-width:130px;
+		height:auto;
+	}
+	
+	.navbar-toggle{
+		float: none;
+		margin: 0;
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		transform: translateY(-50%);
+		border:none;
+		z-index:999;
+		
+		&:hover, &:focus{
+			background:none!important;
+		}
+		
+		.icon-bar{
+			width:30px;
+			background:#333!important;
+		}
+		
+		.icon-bar + .icon-bar{
+			margin-top:3px;
+		}
+	}
+}
+
+#mobile_nav{
+	position:absolute;
+	right:0;
+	transform: translateX(250px);
+	top:0;
+	z-index:999;
+	width:250px;
+	height:100%;
+	background:#FFBA2F;
+	
+	.mobile_menu_close{
+		color: #ffffff;
+		font-size: 27px;
+		position: absolute;
+		right: 15px;
+		top: 5px;
+	}
+	
+	.mobile-menu{
+		padding:0 25px;
+		margin-top:50px;
+	}
+}
+
+//===============================================================================
+//===============================================================================
+// tablet
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-sm-min) {
+	
+}
+
+//===============================================================================
+//===============================================================================
+// Desktop
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-md-min) {
+	header{
+		position: fixed!important;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 220px;
+		padding: 30px 30px 15px;
+		z-index: 1000;
+		-webkit-transition: background-color .8s, background-image .8s;
+		-moz-transition: background-color .8s, background-image .8s;
+		-o-transition: background-color .8s, background-image .8s;
+		transition: background-color .8s, background-image .8s;
+		
+		/*&.navbar{
+			margin-bottom:0;
+			border-radius:0;
+		}
+		
+		&.navbar-default{
+			background-color: #FFBA2F;
+			border:none;
+		}*/
+		
+		.navbar-nav{
+			& > li{
+				float:none;
+				display:block;
+				padding-bottom:25px;
 				
-				&:after{
-					content:"";
-					position:absolute;
-					width:0;
-					height:1px;
-					background:#000;
-					left:0;
-					bottom:0;
+				& > a{
+					font-size: 13px;
+					//line-height: 40px;
+					text-transform: uppercase;
+					padding:0;
+					color:#000!important;
+					display:inline-block;
+					position:relative;
 					transition: all 0.2s ease-in-out;
-				}
-				
-				&:hover{
+					
 					&:after{
-						width:100%;
+						content:"";
+						position:absolute;
+						width:0;
+						height:1px;
+						background:#000;
+						left:0;
+						bottom:0;
+						transition: all 0.2s ease-in-out;
+					}
+					
+					&:hover{
+						&:after{
+							width:100%;
+						}
 					}
 				}
 			}
 		}
-	}
-	
-	.site_logo_container{
-		width:100%;
-		text-align:center;
-		padding-bottom:50px;
 		
-		a{
-			display:inline-block;
-			img{
-				max-width:100%;
+		.site_logo_container{
+			width:100%;
+			text-align:center;
+			padding-bottom:50px;
+			
+			a{
+				display:inline-block;
+				img{
+					max-width:100%;
+				}
 			}
 		}
 	}
+}
+
+//===============================================================================
+//===============================================================================
+// Wide desktop
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-lg-min) {
+	
+}
+
+//===============================================================================
+//===============================================================================
+// Extra Wide desktop
+//===============================================================================
+//===============================================================================
+@media (min-width: @screen-xl-min) {
+
 }

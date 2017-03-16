@@ -23,6 +23,30 @@ var Roots = {
   common: {
     init: function() {
       // JavaScript to be fired on all pages
+	  
+	  function initNavToggle(){
+		 $('.navbar-toggle').click(function(){
+			 if(!$('body').hasClass('popup_enable')){
+				 $("#mobile_nav").transition({ x: 0 },500);
+				 
+				 $('body').addClass('popup_enable');
+				 $('.dark_mask').fadeIn();
+				 
+				 $(".full_content_wrapper").transition({ x: -250 },500);
+			 }
+		 });
+		 
+		 $('.mobile_menu_close').click(function(){
+			 $("#mobile_nav").transition({ x: 250 },500);
+			 $('body').removeClass('popup_enable');
+			 $('.dark_mask').fadeOut();
+			 $(".full_content_wrapper").transition({ x: 0 },500);
+		 });
+	  }
+	  
+	  $(document).ready(function(e) {
+		  initNavToggle();  
+      });
     }
   },
   // Home page
@@ -51,7 +75,7 @@ var Roots = {
 			itemSelector: '.grid_item',
 			percentPosition: true,
 			masonry:{
-				columnWidth: container.find('.grid_item').not('.wide').get(0),
+				columnWidth: container.find('.grid_item').not('.width2x').get(0),
 			}
 		});
 			 

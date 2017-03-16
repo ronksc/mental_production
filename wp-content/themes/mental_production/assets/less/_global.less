@@ -7,9 +7,15 @@
 body{
 	//font-family: 'Oswald', sans-serif;
 	font-family: "Open Sans",sans-serif;
-	
+	-webkit-transition: -webkit-transform 500ms;
+	overflow-x:hidden;
 	&.popup_enable{
 		overflow:hidden;
+		
+		.full_content_wrapper{
+			//transform: translateX(-250px);
+			//transition-duration: 500ms;
+		}
 	}
 }
 
