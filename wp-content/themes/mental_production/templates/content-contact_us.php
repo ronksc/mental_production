@@ -11,11 +11,7 @@
 <div class="container-fluid">
 	<div class="row">
         <div class="map_container">
-            <?php 
-            
-            
-            if( !empty($location) ):
-            ?>
+            <?php if( !empty($location) ): ?>
             <div class="acf-map">
                 <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
             </div>
