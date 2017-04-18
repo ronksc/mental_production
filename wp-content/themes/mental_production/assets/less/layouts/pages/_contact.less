@@ -4,7 +4,131 @@
 //===============================================================================
 //===============================================================================
 .page-template-template-contact_us{
+	.map_container{
+		#map{
+		
+		}
+		
+		.map_container{
+			width:100%;
+		}
+		
+		.acf-map {
+			width: 100%;
+			height:100%;
+		}
+		
+		/* fixes potential theme css conflict */
+		.acf-map img {
+		   max-width: inherit !important;
+		}
+
+	}
 	
+	.contact_bar{
+		.wrap{			
+			.inner_wrap{
+				.info{
+					color: #FFFFFF;
+					position: relative;
+					margin-bottom: 40px;
+				
+					.title, .subtitle{
+						text-transform:uppercase;
+					}
+				
+					.title{
+						font-size: 46px;
+						line-height: 42px;
+						margin-bottom: 15px;
+					}
+					
+					.separator{
+						background-color: #FFFFFF;
+						height: 1px;
+						margin-bottom: 10px;
+						max-width: 245px;
+					}
+					
+					.subtitle{
+						font-size: 20px;
+						line-height: 30px;
+						margin-bottom: 35px;
+					}
+					
+					.address{
+						font-weight: 400;
+						font-size: 14px;
+						line-height: 20px;
+						color: #ffffff;
+					}
+					
+					.info-wrap{
+						color:#fff;
+						.email, .phone, .website, .other-info{
+							font-weight: 400;
+							font-size: 14px;
+							line-height: 20px;
+							color: #ffffff;
+						}
+					}
+					
+					a{
+						color:#fff;
+						&:hover{
+							text-decoration:underline;
+						}
+					}
+				}
+			}
+		}
+		
+		
+		
+		.px-form-name input[type="text"], .px-form-email input[type="email"], .px-form-message textarea{
+			background: none;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 12px;
+			font-weight: 400;
+			color: rgba(255,255,255,0.8);
+			border: 1px solid #ffffff;
+			line-height: 34px;
+			height: 34px;
+			padding: 0 3%;
+			width: 100%;
+			border-radius:0;
+		}
+		
+		.wpcf7-form-control-wrap {
+			display: block;
+			textarea, .input-textarea textarea{
+				padding: 10px 3%;
+				width: 100%;
+				max-width: 100%;
+				min-width: 100%;
+				border-radius:0;
+				height:auto;
+			}
+		}
+		
+		.px-form-message textarea{
+			margin-bottom: 12px;
+		}
+		
+		.px-form-submit input[type="submit"] {
+			cursor: pointer;
+			margin: 0;
+			padding: 8px 20px;
+			line-height: 14px;
+			font-size: 13px;
+			font-weight: 400;
+			background-color: transparent;
+			color: #ffffff;
+			border: 1px solid #ffffff;
+			border-radius: 0;
+		}
+		
+	}
 }
 
 //===============================================================================
@@ -22,7 +146,44 @@
 //===============================================================================
 //===============================================================================
 @media (min-width: @screen-md-min) {
-
+	.page-template-template-contact_us{
+		header{
+			&.navbar-default{
+				background:url(../img/header-gradient-dark.png) repeat-y rgba(0,0,0,0)!important;
+			}
+		}
+		
+		.map_container{
+			
+			position:relative;
+			overflow:hidden;
+			#map{
+			
+			}
+		}
+		
+		.contact_bar{
+			position: absolute; 
+			width: auto; 
+			padding: 50px; 
+			background-color: rgba(0, 0, 0, 0.65); 
+			bottom: 0; 
+			top: 0; 
+			right: 0;
+			
+			.wrap{
+				display:table;
+				width:100%;
+				height:100%;
+				
+				.inner_wrap{
+					display:table-cell;
+					vertical-align:middle;
+					width:100%;
+				}
+			}
+		}
+	}
 }
 
 //===============================================================================
