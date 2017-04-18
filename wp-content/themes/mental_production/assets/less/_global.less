@@ -97,7 +97,7 @@ a{
 		width: 100%;
 		
 		.container{
-			padding:0;
+			padding:0 20px;
 			.row{
 				margin:0;
 			}
@@ -131,6 +131,7 @@ a{
 			color:#fff;
 			
 			.heading {
+				text-align:center;
 				margin-bottom: 20px;
 			}
 			
@@ -149,6 +150,7 @@ a{
 			}
 			
 			.content{
+				text-align:center;
 				p{
 					font-size: 14px;
 					line-height: 20px;
@@ -225,7 +227,7 @@ a{
 			.item {
 				position: relative;
 				height: 200px;
-				width: 280px;
+				width: 100%;
 				max-width: 100%;
 				overflow: hidden;
 				margin: 0 12px 12px 0;
@@ -317,7 +319,20 @@ a{
 //===============================================================================
 //===============================================================================
 @media (min-width: @screen-md-min) {
-	
+	#project_popup{
+		.pj_wrapper{
+			.container{
+				padding:0;
+			}
+		
+			.related-portfolio{
+				.item{
+					//height: 200px;
+					width: 280px;
+				}
+			}
+		}
+	}
 }
 
 //===============================================================================
