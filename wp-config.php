@@ -17,36 +17,37 @@
 // ** MySQL 設定 - 您可以從主機服務提供商獲取相關資訊。 ** //
 /** WordPress 的資料庫名稱，請更改 "database_name_here" */
 
-if ($_SERVER['SERVER_NAME'] == "local.mental-production.com") {
-	define('DB_NAME', 'mental_production');
-	
-	/** MySQL 資料庫使用者名稱，請更改 "username_here" */
-	define('DB_USER', 'root');
-	
-	/** MySQL 資料庫密碼，請更改 "password_here" */
-	define('DB_PASSWORD', 'root');
-	
-	define( 'WP_SITEURL',  'http://local.mental-production.com' );
-	define( 'WP_HOME', 'http://local.mental-production.com' );
-	
-}else if($_SERVER['SERVER_NAME'] == "mental_production.fp-production.com"){
-	define('DB_NAME', 'fpproducti_mentalproduction');
-	
-	/** MySQL 資料庫使用者名稱，請更改 "username_here" */
-	define('DB_USER', 'fpproducti_root');
-	
-	/** MySQL 資料庫密碼，請更改 "password_here" */
-	define('DB_PASSWORD', 'P@ssw0rd');
-	
-	define( 'WP_SITEURL',  'http://mental_production.fp-production.com' );
-	define( 'WP_HOME', 'http://mental_production.fp-production.com' );
+switch ($_SERVER['SERVER_NAME']) {
+  case "local.mental-production.com":
+    define( 'DB_NAME',     'mental_production' );
+    define( 'WP_SITEURL',  'http://local.mental-production.com' );
+    define( 'WP_HOME', 'http://local.mental-production.com' );
+    define( 'DB_USER',     'root' );
+    define( 'DB_PASSWORD', 'root' );
+    define( 'DB_HOST',     'localhost' );
+
+  case "mpstaging.fp-production.com":
+    define( 'DB_NAME',     'fpproducti_mentalpro' );
+    define( 'WP_SITEURL',  'http://mpstaging.fp-production.com' );
+    define( 'WP_HOME', 'http://mpstaging.fp-production.com' );
+    define( 'DB_USER',     'fpproducti_root' );
+    define( 'DB_PASSWORD', 'P@ssw0rd' );
+    define( 'DB_HOST',     'localhost' );
+
+  /*case "www.chumemall.com":
+    define( 'DB_NAME',     'chumemall_db' );
+    define( 'WP_SITEURL',  'http:/www.chumemall.com' );
+    define( 'WP_HOME', 'http://www.chumemall.com' );
+    define( 'DB_USER',     'chumemall_root' );
+    define( 'DB_PASSWORD', 'CmmP@ssword' );
+    define( 'DB_HOST',     'localhost' );*/
 }
 
 /** MySQL 主機位址 */
 define('DB_HOST', 'localhost');
 
 /** 建立資料表時預設的文字編碼 */
-define('DB_CHARSET', 'utf8mb4');
+define('DB_CHARSET', 'utf8');
 
 /** 資料庫對照型態。如果不確定請勿更改。 */
 define('DB_COLLATE', 'utf8_unicode_ci');
@@ -122,6 +123,7 @@ $table_prefix  = 'wp_';
  */
 
 define('WP_DEBUG', false);
+define('WP_ALLOW_REPAIR', true);
 
 define('WP_ENV', 'development');
 

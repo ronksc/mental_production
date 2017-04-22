@@ -6,6 +6,11 @@
 
 .project_grid_container{
 	.grid_item{
+		border:1px solid #fff;
+		margin-right: -1px;
+		margin-bottom: -2px;
+		overflow:hidden;
+	
 		width:100%;
 		position:relative;
 		overflow:hidden;
@@ -13,6 +18,8 @@
 		.image_wrapper{
 			width:100%;
 			position:relative;
+			
+			
 			&:after{
 				content:"";
 				position:absolute;
@@ -20,10 +27,11 @@
 				height:100%;
 				top:0;
 				left:0;
+				border:1px solid #fff;
 				
-				-webkit-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,1); 
+				/*-webkit-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,1); 
 				-moz-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,1); 
-				box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,1);
+				box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,1);*/
 			}
 			
 			/*.image_bg{
@@ -48,9 +56,10 @@
 		}
 		
 		.overlay_wrapper{
-			-webkit-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,1); 
+			//border:1px solid #fff;
+			/*-webkit-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,1); 
 			-moz-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,1); 
-			box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,1);
+			box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,1);*/
 			
 			transition: all 0.3s ease-in-out;
 			position:absolute;
@@ -100,6 +109,9 @@
 					}
 				}
 				.overlay_link{
+					border:1px solid #fff;
+					margin-right: -1px;
+					margin-bottom: -2px;
 					position:absolute;
 					top:0;
 					left:0;
@@ -125,13 +137,16 @@
 //===============================================================================
 //===============================================================================
 @media (min-width: @screen-md-min) {
-	.project_grid_container{
+	.project_grid_container{	
 		padding-left:220px;
 		.grid_item{
 			width:25%;
 			
+			
 			&.width2x{
 				width:50%;
+				
+				margin-right: -2px;
 			}
 			
 			&:hover{
@@ -203,9 +218,13 @@
 	.project_grid_container{
 		.grid_item{
 			width:20%;
+			//width:calc(22.5%-1px);
 			
 			&.width2x{
 				width:40%;
+				//width:calc(43%-1px);
+				
+				
 			}
 			
 			.overlay_wrapper{
