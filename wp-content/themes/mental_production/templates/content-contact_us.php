@@ -32,6 +32,14 @@
                         <div class="website"></div>
                         <div class="other-info"></div>
                     </div>
+					
+					<div class="contact-person">
+					<?php 
+						$post = get_post($post->ID); 
+						$content = apply_filters('the_content', $post->post_content); 
+						echo $content;   
+					?>
+					</div>
                 </div>
                 <div class="contact-form">
                 	<?php echo do_shortcode('[contact-form-7 id="80" title="Contact us form"]'); ?>
