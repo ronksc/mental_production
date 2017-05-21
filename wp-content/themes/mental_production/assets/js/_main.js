@@ -44,6 +44,8 @@ var Roots = {
 		 });
 	  }
 	  
+	  
+	  
 	  $(document).ready(function(e) {
 		  initNavToggle();  
       });
@@ -54,11 +56,7 @@ var Roots = {
     init: function() {
       // JavaScript to be fired on the home page
 	  function showHidePopup(){
-		  $('.overlay_link').click(function(event){
-			  event.preventDefault();
-			  $('#project_popup').fadeIn();
-			  $('body').addClass('popup_enable');
-			  
+		  function itemHoverInit(){
 			  $('.item').each(function(index, element) {
 				  $(this).find('.related-info').css('bottom',$(this).find('.related-info').outerHeight()*-1);
 				  
@@ -80,17 +78,64 @@ var Roots = {
 						  opacity:0
 					  },150);
 				  });  
-			  });
+			  });	  
+		  }
+		  
+		  var $content = $('#project_popup');
+		  
+		  $('.overlay_link').click(function(event){
+			  event.preventDefault();
 			  
+			  var portfolio_id = $(this).data('portfolio-id');
+			  console.log(portfolio_id);
+			  
+			  var ajaxurl = '/wp-admin/admin-ajax.php';
+				
+			  var data = {
+			  	post_id: portfolio_id,
+				action: "load-portfolio"
+			  };
+			  
+			  $.post(ajaxurl, data, function(response) {
+				$content.hide();
+				if(response !== ''){
+					$content.html('');
+				}else{
+					$content.fadeOut();
+				}
+			  }).done(function(response){
+				 $content.html('');
+					
+				if(response === ''){
+					$content.fadeOut();
+				}
+					
+				$content.append(response);
+					
+				$content.fadeIn(400, function(){
+					$('body').addClass('popup_enable');
+					itemHoverInit();
+					
+					if(main_vid_url !== ''){
+						$('#main_video').attr('src',parseUrl(main_vid_url));
+					}
+					
+					$('.mfp-close').click(function(){
+						$content.fadeOut();
+						$('body').removeClass('popup_enable');
+						$('.mfp-close').unbind('click');
+				    });
+				});
+			  }).fail(function(){
+					$content.fadeOut();
+			  }); 
 		  });
-		  
-		  $('.mfp-close').click(function(){
-			  $('#project_popup').fadeOut();
-			  $('body').removeClass('popup_enable');
-		  });
-		  
-		  
 	  }
+	  
+	  /*function load_portfolio(container, id){
+			//$content.show();
+			//$('.whole_page_loading').show();
+		}*/
 	  
 	  $(document).ready(function(){
 		var container = $('#project_grid');
@@ -315,5 +360,12 @@ var UTIL = {
 };
 
 $(document).ready(UTIL.loadEvents);
+
+function parseUrl(url){
+	  	var vimeoRegex = /(?:vimeo)\.com.*(?:videos|video|channels|)\/([\d]+)/i;
+		var parsed = url.match(vimeoRegex);
+		
+		return "//player.vimeo.com/video/" + parsed[1];    
+	  }
 
 })(jQuery); // Fully reference jQuery after this point.

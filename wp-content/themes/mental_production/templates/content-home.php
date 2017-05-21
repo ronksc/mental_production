@@ -28,7 +28,7 @@
                             ?>
                             </div>
                         </div>
-                        <a href="<?php get_permalink($result->ID);?>" class="overlay_link"></a>
+                        <a href="<?php get_permalink($result->ID);?>" data-portfolio-id="<?=$result->ID?>" class="overlay_link"></a>
                     </div>
                 </div>		
             </div>
@@ -36,12 +36,28 @@
 	</div>
 </div>
 <div id="project_popup">
+	<?php
+    	$post_id = 43;
+		$main_video = get_field('main_video', $post_id);
+		$author_credit = get_field('author_credit', $post_id);
+		$related_projects = get_field('related_project', $post_id);
+		
+		$term_list = wp_get_post_terms($post_id, 'portfolio-category', array("fields" => "names"));
+	?>
+
   <div class="pj_wrapper">
   	<button title="Close (Esc)" type="button" class="mfp-close">×</button>
     <div class="portfolio-media" style="height: auto">
       <div class="media-content">
         <div class="video-frame">
-          <iframe src="http://player.vimeo.com/video/107914322?color=ff4c2f" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0"></iframe>
+          <?php if($main_video) {?>
+          	
+            <iframe id="main_video" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0"></iframe>            
+	      	<!--<iframe src="http://player.vimeo.com/video/107914322?color=ff4c2f" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0"></iframe>-->
+          <?php } else { 
+		  	$post_feature_image = get_the_post_thumbnail_url( $post_id, 'full'); ?>
+          	<img src="<?=$post_feature_image?>" class="img-responsive" />
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -50,25 +66,41 @@
         <div class="row">
           <div class="span12">
             <div class="heading">
-              <h3 class="title">DREAMS</h3>
-              <p class="skills">Photography</p>
+              <h3 class="title"><?=get_the_title($post_id); ?></h3>
+              <?php
+				foreach($term_list as $term):
+					echo '<p class="skills">'.$term.'</p>';
+				endforeach;
+			  ?>
 			</div>
             <div class="content">
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              <?php 
+				$post = get_post($post_id); 
+				$content = apply_filters('the_content', $post->post_content); 
+				echo $content;   
+			  ?>
             </div>
           </div>
         </div>
+        
         <div class="attributes clearfix">
+          <?php if($author_credit){ ?>
           <div class="attribute">
-            <h2 class="title">Photo by:</h2>
-            <p class="value">Ashly Simpson</p>
+            <h2 class="title">Production by:</h2>
+            <p class="value"><?=$author_credit?></p>
           </div>
-          <div class="post-navigation"> <a href="http://demo3.pixflow.net/lightbox/portfolios/the-door/" class="previous">Previous</a> <a href="http://demo3.pixflow.net/lightbox/portfolios/new-style/" class="next">Next</a></div>
+          <?php } ?>
+          <div class="post-navigation"> <a href="#" class="previous">Previous</a> <a href="#" class="next">Next</a></div>
         </div>
       </div>
       <div class="separator"></div>
       <div class="related-portfolio clearfix">
         <div class="title">Related Entries</div>
+        
+        <?php if(count($related_projects) > 0):
+		
+		foreach($related_projects as $project):	
+		?>
         <div class="item">
           <div class="item-image">
             <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/1212-1406801270-270x200.jpg'); position: relative;"></div>
@@ -83,188 +115,11 @@
             </div>
           </div>
         </div>
-        <div class="item">
-          <div class="item-image">
-            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2015/01/SvRQ8dp5ZlGzi4Ek-270x200.jpg'); position: relative;"></div>
-            <div class="image-overlay"></div>
-          </div>
-          <div class="related-info">
-            <div class="overlay-wrapper">
-              <div class="overlay"> <a href="http://demo3.pixflow.net/lightbox/portfolios/fancy-vision/" class="overlay-link">
-                <h3 class="overlay-title">FANCY VISION</h3>
-                <div class="overlay-category">Photography</div>
-                </a></div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-image">
-            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/Thisispaper_Gardening-38a-270x200.jpg'); position: relative;"></div>
-            <div class="image-overlay"></div>
-          </div>
-          <div class="related-info">
-            <div class="overlay-wrapper">
-              <div class="overlay"> <a href="http://demo3.pixflow.net/lightbox/portfolios/ikea-stuff/" class="overlay-link">
-                <h3 class="overlay-title">IKEA STUFF</h3>
-                <div class="overlay-category">Design, Photography</div>
-                </a></div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-image">
-            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2015/01/O0brja5Qx6VXR9fA-270x200.jpg'); position: relative;"></div>
-            <div class="image-overlay"></div>
-          </div>
-          <div class="related-info">
-            <div class="overlay-wrapper">
-              <div class="overlay"> <a href="http://demo3.pixflow.net/lightbox/portfolios/1405/" class="overlay-link">
-                <h3 class="overlay-title">LIGHTS</h3>
-                <div class="overlay-category">Branding, Photography</div>
-                </a></div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-image">
-            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2015/01/2523-270x200.jpg'); position: relative;"></div>
-            <div class="image-overlay"></div>
-          </div>
-          <div class="related-info">
-            <div class="overlay-wrapper">
-              <div class="overlay"> <a href="http://demo3.pixflow.net/lightbox/portfolios/sun-glasses/" class="overlay-link">
-                <h3 class="overlay-title">SUNGLASSES</h3>
-                <div class="overlay-category">Fashion, Photography</div>
-                </a></div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-image">
-            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/2545-270x200.jpg'); position: relative;"></div>
-            <div class="image-overlay"></div>
-          </div>
-          <div class="related-info">
-            <div class="overlay-wrapper">
-              <div class="overlay"> <a href="http://demo3.pixflow.net/lightbox/portfolios/226/" class="overlay-link">
-                <h3 class="overlay-title">FASHION SERVED</h3>
-                <div class="overlay-category">Branding, Photography</div>
-                </a></div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-image">
-            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2015/01/9e7b5b38901dd20febbaee11c55296ce-270x200.jpg'); position: relative;"></div>
-            <div class="image-overlay"></div>
-          </div>
-          <div class="related-info">
-            <div class="overlay-wrapper">
-              <div class="overlay"> <a href="http://demo3.pixflow.net/lightbox/portfolios/1400/" class="overlay-link">
-                <h3 class="overlay-title">ROBAT CHARACTER</h3>
-                <div class="overlay-category">Photography</div>
-                </a></div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-image">
-            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2015/01/Vishesh_Verma_02-270x200.jpg'); position: relative;"></div>
-            <div class="image-overlay"></div>
-          </div>
-          <div class="related-info">
-            <div class="overlay-wrapper">
-              <div class="overlay"> <a href="http://demo3.pixflow.net/lightbox/portfolios/1370/" class="overlay-link">
-                <h3 class="overlay-title">BEAUTY TIPS</h3>
-                <div class="overlay-category">Photography</div>
-                </a></div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-image">
-            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/42-270x200.jpg'); position: relative;"></div>
-            <div class="image-overlay"></div>
-          </div>
-          <div class="related-info">
-            <div class="overlay-wrapper">
-              <div class="overlay"> <a href="http://demo3.pixflow.net/lightbox/portfolios/new-season/" class="overlay-link">
-                <h3 class="overlay-title">SUMMERTIME</h3>
-                <div class="overlay-category">Photography</div>
-                </a></div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-image">
-            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2015/01/colaj-270x200.jpg'); position: relative;"></div>
-            <div class="image-overlay"></div>
-          </div>
-          <div class="related-info">
-            <div class="overlay-wrapper">
-              <div class="overlay"> <a href="http://demo3.pixflow.net/lightbox/portfolios/tim-knufman/" class="overlay-link">
-                <h3 class="overlay-title">TIM KNUFMAN</h3>
-                <div class="overlay-category">Photography</div>
-                </a></div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-image">
-            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/another-country-stool-one-oak-natural-009_4d1250e9-33c7-4703-ba67-4d9c743b5496-270x200.jpeg'); position: relative;"></div>
-            <div class="image-overlay"></div>
-          </div>
-          <div class="related-info">
-            <div class="overlay-wrapper">
-              <div class="overlay"> <a href="http://demo3.pixflow.net/lightbox/portfolios/furniture-design/" class="overlay-link">
-                <h3 class="overlay-title">FURNITURE DESIGN</h3>
-                <div class="overlay-category">Design, Photography</div>
-                </a></div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-image">
-            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/AOZzHabmM3ToEN2g-270x200.jpg'); position: relative;"></div>
-            <div class="image-overlay"></div>
-          </div>
-          <div class="related-info">
-            <div class="overlay-wrapper">
-              <div class="overlay"> <a href="http://demo3.pixflow.net/lightbox/portfolios/1416/" class="overlay-link">
-                <h3 class="overlay-title">DESIRES</h3>
-                <div class="overlay-category">Branding, Photography</div>
-                </a></div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-image">
-            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/y5y61-270x200.jpg'); position: relative;"></div>
-            <div class="image-overlay"></div>
-          </div>
-          <div class="related-info">
-            <div class="overlay-wrapper">
-              <div class="overlay"> <a href="http://demo3.pixflow.net/lightbox/portfolios/white-zone/" class="overlay-link">
-                <h3 class="overlay-title">WHITE ZONE</h3>
-                <div class="overlay-category">Photography</div>
-                </a></div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-image">
-            <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/TC_ecoBag1-270x200.png'); position: relative;"></div>
-            <div class="image-overlay"></div>
-          </div>
-          <div class="related-info">
-            <div class="overlay-wrapper">
-              <div class="overlay"> <a href="http://demo3.pixflow.net/lightbox/portfolios/shopping-bag/" class="overlay-link">
-                <h3 class="overlay-title">SHOPPING BAG</h3>
-                <div class="overlay-category">Photography</div>
-                </a></div>
-            </div>
-          </div>
-        </div>
+        
+        <?php endforeach;
+		
+		endif;?>
+        
       </div>
     </div>
   </div>
