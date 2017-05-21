@@ -56,30 +56,7 @@ var Roots = {
     init: function() {
       // JavaScript to be fired on the home page
 	  function showHidePopup(){
-		  function itemHoverInit(){
-			  $('.item').each(function(index, element) {
-				  $(this).find('.related-info').css('bottom',$(this).find('.related-info').outerHeight()*-1);
-				  
-				  $(this).hover(function(){
-					  $(this).addClass('hover');
-					  $(this).find('.related-thumb').animate({'top':$(this).find('.related-info').outerHeight()*-1},150);
-					  $(this).find('.related-info').animate({
-						  bottom:0
-					  },100, function(){
-						  $(this).animate({
-							  opacity:1
-					      },50);
-					  });
-				  }, function(){
-					  $(this).removeClass('hover');
-					  $(this).find('.related-thumb').animate({'top':0}, 150);
-					  $(this).find('.related-info').animate({
-						  bottom:$(this).find('.related-info').outerHeight()*-1,
-						  opacity:0
-					  },150);
-				  });  
-			  });	  
-		  }
+		  
 		  
 		  var $content = $('#project_popup');
 		  
@@ -87,12 +64,13 @@ var Roots = {
 			  event.preventDefault();
 			  
 			  var portfolio_id = $(this).data('portfolio-id');
-			  console.log(portfolio_id);
+			  //console.log(portfolio_id);
 			  
 			  var ajaxurl = '/wp-admin/admin-ajax.php';
 				
 			  var data = {
 			  	post_id: portfolio_id,
+				parentPage_id: currentPage_id,
 				action: "load-portfolio"
 			  };
 			  
@@ -113,6 +91,7 @@ var Roots = {
 				$content.append(response);
 					
 				$content.fadeIn(400, function(){
+					history.pushState('','', portfolio_url);
 					$('body').addClass('popup_enable');
 					itemHoverInit();
 					
@@ -124,6 +103,8 @@ var Roots = {
 						$content.fadeOut();
 						$('body').removeClass('popup_enable');
 						$('.mfp-close').unbind('click');
+						$content.html('');
+						history.pushState('','', parentPage_url);
 				    });
 				});
 			  }).fail(function(){
@@ -164,6 +145,18 @@ var Roots = {
   about_us: {
     init: function() {
       // JavaScript to be fired on the about us page
+    }
+  },
+  single_portfolio: {
+    init: function() {
+      // JavaScript to be fired on the about us page
+	  $(document).ready(function(){
+		itemHoverInit();
+		
+		if(main_vid_url !== ''){
+			$('#main_video').attr('src',parseUrl(main_vid_url));
+		}
+	  });
     }
   },
   page_template_template_contact_us: {
@@ -362,10 +355,35 @@ var UTIL = {
 $(document).ready(UTIL.loadEvents);
 
 function parseUrl(url){
-	  	var vimeoRegex = /(?:vimeo)\.com.*(?:videos|video|channels|)\/([\d]+)/i;
-		var parsed = url.match(vimeoRegex);
-		
-		return "//player.vimeo.com/video/" + parsed[1];    
-	  }
+  	var vimeoRegex = /(?:vimeo)\.com.*(?:videos|video|channels|)\/([\d]+)/i;
+	var parsed = url.match(vimeoRegex);
+	
+	return "//player.vimeo.com/video/" + parsed[1];    
+}
+	  
+function itemHoverInit(){
+	$('.item').each(function(index, element) {
+		$(this).find('.related-info').css('bottom',$(this).find('.related-info').outerHeight()*-1);
+		  
+		$(this).hover(function(){
+			$(this).addClass('hover');
+			$(this).find('.related-thumb').animate({'top':$(this).find('.related-info').outerHeight()*-1},150);
+			$(this).find('.related-info').animate({
+				bottom:0
+			},100, function(){
+				$(this).animate({
+					opacity:1
+				},50);
+			});
+		}, function(){
+			$(this).removeClass('hover');
+			$(this).find('.related-thumb').animate({'top':0}, 150);
+			$(this).find('.related-info').animate({
+				bottom:$(this).find('.related-info').outerHeight()*-1,
+				opacity:0
+			},150);
+		});
+	});
+}
 
 })(jQuery); // Fully reference jQuery after this point.

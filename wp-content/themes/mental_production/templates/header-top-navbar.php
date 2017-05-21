@@ -1,3 +1,7 @@
+<script type="text/javascript">
+	var currentPage_id = <?=$post->ID?>;
+</script>
+
 <div class="full_content_wrapper">
     <header class="banner navbar navbar-default" role="banner">
       <div class="container visible-xs visible-sm hidden-md hidden-lg">
@@ -17,7 +21,7 @@
       </div>
       <div class="nav-container">
         <div class="site_logo_container hidden-xs hidden-sm visible-md visible-lg">
-            <a href="<?php echo home_url(); ?>/"><img src="<?=get_stylesheet_directory_uri()?>/assets/img/logo_mp.png" class="img-responsive"></a>
+            <a href="<?php echo home_url(); ?>/"><img src="<?=get_stylesheet_directory_uri()?>/assets/img/logo.png" class="img-responsive"></a>
         </div>
         <nav class="collapse navbar-collapse main-menu" role="navigation">
             <?php

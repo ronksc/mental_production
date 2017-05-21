@@ -15,6 +15,7 @@ function load_portfolio(){
 	global $wpdb; 
 	
 	$post_id = (isset($_POST['post_id'])) ? $_POST['post_id'] : 0;	
+	$parentPage_id = (isset($_POST['parentPage_id'])) ? $_POST['parentPage_id'] : 0;	
 	
 	$main_video = get_field('main_video', $post_id);
 	$author_credit = get_field('author_credit', $post_id);
@@ -73,18 +74,27 @@ function load_portfolio(){
             <div class="title">Related Entries</div>
             
             <?php if(count($related_projects) > 0):
-                foreach($related_projects as $project): ?>
+                foreach($related_projects as $project): 
+				$project_term_list = wp_get_post_terms($project->ID, 'portfolio-category', array("fields" => "names"));
+				$project_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $project->ID ), 'single-post-thumbnail' );
+			?>
             
             <div class="item">
               <div class="item-image">
-                <div class="related-thumb" style="background-image: url('http://demo3.pixflow.net/lightbox/wp-content/uploads/sites/46/2014/12/1212-1406801270-270x200.jpg'); position: relative;"></div>
+                <div class="related-thumb" style="background-image: url('<?=$project_image_url[0]?>'); position: relative;"></div>
                 <div class="image-overlay"></div>
               </div>
               <div class="related-info">
                 <div class="overlay-wrapper">
-                  <div class="overlay"> <a href="http://demo3.pixflow.net/lightbox/portfolios/new-style/" class="overlay-link">
-                    <h3 class="overlay-title">NEW STYLE</h3>
-                    <div class="overlay-category">Fashion, Photography</div>
+                  <div class="overlay"> <a href="<?=get_permalink($project->ID)?>" class="overlay-link">
+                    <h3 class="overlay-title"><?=$project->post_title?></h3>
+                    <div class="overlay-category">
+						<?php
+							foreach($project_term_list as $project_term):
+								echo '<p>'.$project_term.'</p>';
+							endforeach;
+						?>
+					</div>
                     </a></div>
                 </div>
               </div>
@@ -99,6 +109,8 @@ function load_portfolio(){
       
       <script type="text/javascript">	
 	  	var main_vid_url = "<?=$main_video[0]['vimeo_link'];?>";
+		var portfolio_url = "<?=get_permalink($post_id)?>";
+		var parentPage_url = "<?=get_permalink($parentPage_id)?>";
 	  </script>
 <?php	
 	exit();
