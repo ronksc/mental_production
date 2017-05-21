@@ -29,8 +29,8 @@ if ($_SERVER['SERVER_NAME'] == "local.mental-production.com") {
 	define( 'WP_SITEURL',  'http://local.mental-production.com' );
 	define( 'WP_HOME', 'http://local.mental-production.com' );
 	
-}else if($_SERVER['SERVER_NAME'] == "mental_production.fp-production.com"){
-	define('DB_NAME', 'fpproducti_mentalproduction');
+}else if($_SERVER['SERVER_NAME'] == "mpstaging.fp-production.com"){
+	define('DB_NAME', ' fpproducti_mentalpro');
 	
 	/** MySQL 資料庫使用者名稱，請更改 "username_here" */
 	define('DB_USER', 'fpproducti_root');
@@ -38,15 +38,15 @@ if ($_SERVER['SERVER_NAME'] == "local.mental-production.com") {
 	/** MySQL 資料庫密碼，請更改 "password_here" */
 	define('DB_PASSWORD', 'P@ssw0rd');
 	
-	define( 'WP_SITEURL',  'http://mental_production.fp-production.com' );
-	define( 'WP_HOME', 'http://mental_production.fp-production.com' );
+	define( 'WP_SITEURL',  'http://mpstaging.fp-production.com' );
+	define( 'WP_HOME', 'http://mpstaging.fp-production.com' );
 }
 
 /** MySQL 主機位址 */
 define('DB_HOST', 'localhost');
 
 /** 建立資料表時預設的文字編碼 */
-define('DB_CHARSET', 'utf8mb4');
+define('DB_CHARSET', 'utf8');
 
 /** 資料庫對照型態。如果不確定請勿更改。 */
 define('DB_COLLATE', 'utf8_unicode_ci');
