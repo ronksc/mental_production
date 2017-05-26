@@ -135,6 +135,13 @@ var Roots = {
 			container.isotope('layout');
 		});
 		
+		$('.navbar-nav li a').click(function(event) {
+			event.preventDefault();
+		    var filterValue = $(this).attr('class');
+		 	console.log(filterValue);
+		    container.isotope({ filter: filterValue });
+		});
+		
 		$(window).resize(function(){
 			container.isotope('layout');						  
 		});

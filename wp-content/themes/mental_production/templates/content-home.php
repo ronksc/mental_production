@@ -10,8 +10,10 @@
 			//Returns Array of Term Names for "my_taxonomy"
 			$term_list = wp_get_post_terms($result->ID, 'portfolio-category', array("fields" => "names"));
 			//print_r($term_list);
+			
+			$category_class = strtolower(implode(" ", $term_list));
 		?>
-			<div class="grid_item <?=$home_display_width?>">
+			<div class="grid_item <?=$home_display_width?> <?=$category_class?>">
                 <div class="image_wrapper">
                     <img src="<?=$home_display_image?>" class="img-responsive" />
                 </div>

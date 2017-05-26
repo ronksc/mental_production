@@ -26,11 +26,11 @@ switch ($_SERVER['SERVER_NAME']) {
     define( 'DB_PASSWORD', 'root' );
     define( 'DB_HOST',     'localhost' );
 
-  case "mpstaging.fp-production.com":
-    define( 'DB_NAME',     'fpproducti_mentalpro' );
-    define( 'WP_SITEURL',  'http://mpstaging.fp-production.com' );
-    define( 'WP_HOME', 'http://mpstaging.fp-production.com' );
-    define( 'DB_USER',     'fpproducti_root' );
+  case "mpstaging.sellbuyshipmgt.com":
+    define( 'DB_NAME',     'sellbuyshi_mpdb' );
+    define( 'WP_SITEURL',  'http://mpstaging.sellbuyshipmgt.com' );
+    define( 'WP_HOME', 'http://mpstaging.sellbuyshipmgt.com' );
+    define( 'DB_USER',     'sellbuyshi_root' );
     define( 'DB_PASSWORD', 'P@ssw0rd' );
     define( 'DB_HOST',     'localhost' );
 
