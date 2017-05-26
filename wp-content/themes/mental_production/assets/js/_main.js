@@ -135,11 +135,20 @@ var Roots = {
 			container.isotope('layout');
 		});
 		
-		$('.navbar-nav li a').click(function(event) {
+		$('.navbar-nav .sub-menu li').click(function(event) {
 			event.preventDefault();
-		    var filterValue = $(this).attr('class');
-		 	console.log(filterValue);
-		    container.isotope({ filter: filterValue });
+		    var filterValue = $(this).attr('class').replace('menu-', '.');
+			
+		 	//console.log('nav clicked,filterValue: '+filterValue);
+			
+			if($(window).width() < 992){
+				$("#mobile_nav").transition({ x: 250 },500);
+				$('body').removeClass('popup_enable');
+				$('.dark_mask').fadeOut();
+				$(".full_content_wrapper").transition({ x: 0 },500);
+			}
+			
+		    container.isotope({ filter: filterValue});
 		});
 		
 		$(window).resize(function(){

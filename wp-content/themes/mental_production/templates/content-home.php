@@ -11,9 +11,13 @@
 			$term_list = wp_get_post_terms($result->ID, 'portfolio-category', array("fields" => "names"));
 			//print_r($term_list);
 			
-			$category_class = strtolower(implode(" ", $term_list));
+			$self_terms = get_the_terms( $result->ID, 'portfolio-category' );
+			//print_r($self_terms);
+			$slugs = implode(' ',wp_list_pluck($self_terms,'slug'));
+			//echo $slugs;
+			//$category_class = strtolower(implode(" ", $term_list));
 		?>
-			<div class="grid_item <?=$home_display_width?> <?=$category_class?>">
+			<div class="grid_item <?=$home_display_width?> <?=$slugs?>">
                 <div class="image_wrapper">
                     <img src="<?=$home_display_image?>" class="img-responsive" />
                 </div>
