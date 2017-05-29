@@ -48,6 +48,12 @@ var Roots = {
 	  
 	  $(document).ready(function(e) {
 		  initNavToggle();  
+		  
+		  $('.navbar-nav a').on('click touchend', function(e) {
+		  	var el = $(this);
+			var link = el.attr('href');
+			window.location = link;
+		  });
       });
     }
   },
@@ -136,10 +142,10 @@ var Roots = {
 		});
 		
 		$('.navbar-nav .sub-menu li').click(function(event) {
-			event.preventDefault();
+			//event.preventDefault();
 		    var filterValue = $(this).attr('class').replace('menu-', '.');
 			
-		 	//console.log('nav clicked,filterValue: '+filterValue);
+		 	console.log('nav clicked,filterValue: '+filterValue);
 			
 			if($(window).width() < 992){
 				$("#mobile_nav").transition({ x: 250 },500);
@@ -152,7 +158,7 @@ var Roots = {
 		});
 		
 		$(window).resize(function(){
-			container.isotope('layout');						  
+			container.isotope('layout');
 		});
 	  });
     }
