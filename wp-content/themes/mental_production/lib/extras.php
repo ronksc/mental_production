@@ -26,7 +26,15 @@ function load_portfolio(){
 	
 	//$current_post = get_post( $post_id ); 	
 	//print_r($current_post);
-	$pagelist = get_pages("child_of=".$current_post->post_parent."&parent=".$current_post->post_parent."&sort_column=menu_order&sort_order=asc");
+	
+	$args = array(
+	  'numberposts' => -1,
+	  'post_type'   => 'portfolio'
+	);
+	 
+	$pagelist = get_posts( $args );
+	
+	//$pagelist = get_pages("child_of=".$current_post->post_parent."&parent=".$current_post->post_parent."&sort_column=menu_order&sort_order=asc");
 	//$pagelist = new WP_Query( array( 'post_type' => 'portfolio' ) );
 	//print_r($pagelist);
 	$pages = array();
@@ -84,7 +92,15 @@ function load_portfolio(){
                 <p class="value"><?=$author_credit?></p>
               </div>
               <?php } ?>
-              <div class="post-navigation"> <a href="#" class="previous">Previous</a> <a href="#" class="next">Next</a></div>
+              <div class="post-navigation"> 
+			  	<?php if(!empty($prevID)): ?>
+				  	<a href="<?=get_permalink($prevID)?>" class="previous">Previous</a>
+				<?php endif; ?>
+				
+				<?php if(!empty($nextID)): ?>
+					<a href="<?=get_permalink($nextID)?>" class="next">Next</a>
+				<?php endif; ?>
+			  </div>
             </div>
           </div>
           <div class="separator"></div>

@@ -5,7 +5,24 @@ while (have_posts()) : the_post();
 	$author_credit = get_field('author_credit', $post_id);
 	$related_projects = get_field('related_project', $post_id);
 	
-	$term_list = wp_get_post_terms($post_id, 'portfolio-category', array("fields" => "names")); ?>
+	$term_list = wp_get_post_terms($post_id, 'portfolio-category', array("fields" => "names")); 
+	
+	$args = array(
+	  'numberposts' => -1,
+	  'post_type'   => 'portfolio'
+	);
+	 
+	$pagelist = get_posts( $args );
+	$pages = array();
+	foreach ($pagelist as $page) {
+	   $pages[] += $page->ID;
+	}
+	
+	$current = array_search($post_id, $pages);
+	$prevID = $pages[$current-1];
+	$nextID = $pages[$current+1];
+	
+	?>
   <div id="project_popup" class="single_paged">
   	<div class="pj_wrapper">
         <div class="portfolio-media" style="height: auto">
@@ -49,7 +66,15 @@ while (have_posts()) : the_post();
                 <p class="value"><?=$author_credit?></p>
               </div>
               <?php } ?>
-              <div class="post-navigation"> <a href="#" class="previous">Previous</a> <a href="#" class="next">Next</a></div>
+              <div class="post-navigation"> 
+ 			  	<?php if(!empty($prevID)): ?>
+				  	<a href="<?=get_permalink($prevID)?>" class="previous">Previous</a>
+				<?php endif; ?>
+				
+				<?php if(!empty($nextID)): ?>
+					<a href="<?=get_permalink($nextID)?>" class="next">Next</a>
+				<?php endif; ?>
+			  </div>
             </div>
           </div>
           <div class="separator"></div>

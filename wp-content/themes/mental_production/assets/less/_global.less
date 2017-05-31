@@ -10,15 +10,17 @@ body{
 	-webkit-transition: -webkit-transform 500ms;
 	overflow-x:hidden;
 	&.popup_enable{
-		overflow:hidden;
+		overflow:hidden!important;
 		
 		.full_content_wrapper{
 			//transform: translateX(-250px);
 			//transition-duration: 500ms;
 		}
 		
-		#mobile_nav{
-			right: 0;
+		&.mobile_nav_enable{
+			#mobile_nav{
+				right: 0;
+			}
 		}
 	}
 }
