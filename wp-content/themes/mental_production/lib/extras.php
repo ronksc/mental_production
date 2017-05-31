@@ -22,6 +22,24 @@ function load_portfolio(){
 	$related_projects = get_field('related_project', $post_id);
 	
 	$term_list = wp_get_post_terms($post_id, 'portfolio-category', array("fields" => "names"));
+	
+	
+	//$current_post = get_post( $post_id ); 	
+	//print_r($current_post);
+	$pagelist = get_pages("child_of=".$current_post->post_parent."&parent=".$current_post->post_parent."&sort_column=menu_order&sort_order=asc");
+	//$pagelist = new WP_Query( array( 'post_type' => 'portfolio' ) );
+	//print_r($pagelist);
+	$pages = array();
+	foreach ($pagelist as $page) {
+	   $pages[] += $page->ID;
+	}
+	
+	$current = array_search($post_id, $pages);
+	$prevID = $pages[$current-1];
+	$nextID = $pages[$current+1];
+	
+	//print_r('prevID: '.$prevID);
+	//print_r('nextID: '.$nextID);
 ?>
 	<div class="pj_wrapper">
         <button title="Close (Esc)" type="button" class="mfp-close">×</button>

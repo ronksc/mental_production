@@ -147,6 +147,7 @@ var Roots = {
 			
 		 	console.log('nav clicked,filterValue: '+filterValue);
 			
+			
 			if($(window).width() < 992){
 				$("#mobile_nav").transition({ x: 250 },500);
 				$('body').removeClass('popup_enable');
@@ -154,7 +155,11 @@ var Roots = {
 				$(".full_content_wrapper").transition({ x: 0 },500);
 			}
 			
-		    container.isotope({ filter: filterValue});
+			if (filterValue.toLowerCase() === '.all-categories'){
+				container.isotope({ filter: '*' });
+			}else{
+			    container.isotope({ filter: filterValue});
+			}
 		});
 		
 		$(window).resize(function(){
