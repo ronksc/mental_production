@@ -94,11 +94,13 @@ function load_portfolio(){
               <?php } ?>
               <div class="post-navigation"> 
 			  	<?php if(!empty($prevID)): ?>
-				  	<a href="<?=get_permalink($prevID)?>" class="previous">Previous</a>
+				  	<!--<a href="<?=get_permalink($prevID)?>"  class="previous">Previous</a>-->
+					<a href="javascript:;" data-portfolio-id="<?=$prevID?>" class="previous">Previous</a>
 				<?php endif; ?>
 				
 				<?php if(!empty($nextID)): ?>
-					<a href="<?=get_permalink($nextID)?>" class="next">Next</a>
+					<!--<a href="<?=get_permalink($nextID)?>" class="next">Next</a>-->
+					<a href="javascript:;" data-portfolio-id="<?=$nextID?>" class="next">Next</a>
 				<?php endif; ?>
 			  </div>
             </div>
