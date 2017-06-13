@@ -41,4 +41,3 @@
 		<?php endforeach; ?>
 	</div>
 </div>
-<div id="project_popup"></div>

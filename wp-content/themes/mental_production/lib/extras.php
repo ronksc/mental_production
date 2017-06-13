@@ -15,7 +15,8 @@ function load_portfolio(){
 	global $wpdb; 
 	
 	$post_id = (isset($_POST['post_id'])) ? $_POST['post_id'] : 0;	
-	$parentPage_id = (isset($_POST['parentPage_id'])) ? $_POST['parentPage_id'] : 0;	
+	$parentPage_id = (isset($_POST['parentPage_id'])) ? $_POST['parentPage_id'] : 0;
+	$post_cat = (isset($_POST['post_cat'])) ? $_POST['post_cat'] : 0;
 	
 	$main_video = get_field('main_video', $post_id);
 	$author_credit = get_field('author_credit', $post_id);
@@ -27,24 +28,58 @@ function load_portfolio(){
 	//$current_post = get_post( $post_id ); 	
 	//print_r($current_post);
 	
-	$args = array(
+	/*$args = array(
 	  'numberposts' => -1,
-	  'post_type'   => 'portfolio'
+	  'post_type'   => 'portfolio',
+	  
 	);
 	 
-	$pagelist = get_posts( $args );
+	$pagelist = get_posts( $args );*/
+	
+	if($post_cat){
+		$post_arr = array(
+			'numberposts'   => -1, // get all posts.
+			'post_type'   => 'portfolio',
+			'orderby'		=> 'menu_order',
+			'order'		=> 'DESC',
+			'tax_query'     => array(
+				array(
+					'taxonomy'  => 'portfolio-category',
+					'field'     => 'slug',
+					'terms'     => $post_cat,
+				),
+			),
+			'fields'        => 'ids', // Only get post IDs
+		);
+	}else{
+		$post_arr = array(
+			'numberposts'   => -1, // get all posts.
+			'post_type'   => 'portfolio',
+			'orderby'		=> 'menu_order',
+			'order'		=> 'DESC',
+			'fields'        => 'ids', // Only get post IDs
+		);
+	}
+	
+	$pagelist = get_posts($post_arr);  
 	
 	//$pagelist = get_pages("child_of=".$current_post->post_parent."&parent=".$current_post->post_parent."&sort_column=menu_order&sort_order=asc");
 	//$pagelist = new WP_Query( array( 'post_type' => 'portfolio' ) );
 	//print_r($pagelist);
-	$pages = array();
+	
+	
+	/*$pages = array();
 	foreach ($pagelist as $page) {
 	   $pages[] += $page->ID;
 	}
-	
-	$current = array_search($post_id, $pages);
+	*/
+	/*$current = array_search($post_id, $pages);
 	$prevID = $pages[$current-1];
-	$nextID = $pages[$current+1];
+	$nextID = $pages[$current+1];*/
+	
+	$current = array_search($post_id, $pagelist);
+	$prevID = $pagelist[$current-1];
+	$nextID = $pagelist[$current+1];
 	
 	//print_r('prevID: '.$prevID);
 	//print_r('nextID: '.$nextID);
@@ -141,7 +176,7 @@ function load_portfolio(){
             
           </div>
         </div>
-      </div>
+</div>
       
       <script type="text/javascript">	
 	  	var main_vid_url = "<?=$main_video[0]['vimeo_link'];?>";

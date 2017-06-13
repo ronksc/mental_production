@@ -23,6 +23,7 @@ var Roots = {
   common: {
     init: function() {
       // JavaScript to be fired on all pages
+	  var filterValue = '';
 	  
 	  function initNavToggle(){
 		 $('.navbar-toggle').click(function(){
@@ -62,6 +63,14 @@ var Roots = {
     init: function() {
       // JavaScript to be fired on the home page
 	  function loadPortfolio(portfolio_id, fadeFlag){
+		  
+		  //console.log('current filterValue: '+filterValue);
+		  
+		  if($('#project_popup').length === 0){
+			  var new_project_popup = '<div id="project_popup"></div>';
+			  $( "body" ).append( new_project_popup );
+		  }
+		  
 		  var $content = $('#project_popup');
 		  
 		  var ajaxurl = '/wp-admin/admin-ajax.php';
@@ -69,10 +78,18 @@ var Roots = {
 		  var data = {
 			post_id: portfolio_id,
 			parentPage_id: currentPage_id,
+			post_cat: filterValue.replace('.', ''),
 			action: "load-portfolio"
 		  };
 		  
 		  $.post(ajaxurl, data, function(response) {
+			if($('#project_popup').length === 0){
+			  var new_project_popup = '<div id="project_popup"></div>';
+			  $( "body" ).append( new_project_popup );
+			}
+			  
+			$content = $('#project_popup');
+										 
 			if(fadeFlag){
 				$content.hide();
 			}
@@ -131,6 +148,7 @@ var Roots = {
 					//$('.project_grid_container').unbind('touchmove');
 					//toggleViewportScrolling(false);
 					$content.html('');
+					$content.remove();
 					history.pushState('','', parentPage_url);
 				});
 			});
@@ -160,6 +178,9 @@ var Roots = {
 		}*/
 	  
 	  $(document).ready(function(){
+		filterValue = '';
+		console.log('default filterValue: '+filterValue);
+								 
 		var container = $('#project_grid');
 		
 		showHidePopup();
@@ -178,7 +199,7 @@ var Roots = {
 		
 		$('.navbar-nav .sub-menu li').click(function(event) {
 			//event.preventDefault();
-		    var filterValue = $(this).attr('class').replace('menu-', '.');
+		    filterValue = $(this).attr('class').replace('menu-', '.');
 			
 		 	console.log('nav clicked,filterValue: '+filterValue);
 			
@@ -192,6 +213,7 @@ var Roots = {
 			
 			if (filterValue.toLowerCase() === '.all-categories'){
 				container.isotope({ filter: '*' });
+				filterValue = '';
 			}else{
 			    container.isotope({ filter: filterValue});
 			}
