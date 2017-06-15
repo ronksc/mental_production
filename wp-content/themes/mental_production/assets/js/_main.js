@@ -212,6 +212,7 @@ var Roots = {
 			}
 			
 			if (filterValue.toLowerCase() === '.all-categories'){
+				console.log('enter');
 				container.isotope({ filter: '*' });
 				filterValue = '';
 			}else{
