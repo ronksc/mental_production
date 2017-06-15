@@ -1,6 +1,13 @@
 <footer class="content-info" role="contentinfo" style="">
       <!--<div class="container">-->
         <?php //dynamic_sidebar('sidebar-footer'); ?>
+        <div class="social_media_container">
+		<?php if(get_field('social_media')): ?>            
+            <?php while(has_sub_field('social_media')): ?>
+                <a href="<?php the_sub_field('social_link'); ?>" target="_blank" style="background-image:url(<?php the_sub_field('social_icon'); ?>)"></a>
+            <?php endwhile; ?>
+        <?php endif; ?>
+        </div>
         &copy;2017 Mental Production Ltd.
       <!--</div>-->
     </footer>
