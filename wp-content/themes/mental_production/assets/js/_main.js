@@ -188,6 +188,7 @@ var Roots = {
 		container.isotope({
 			itemSelector: '.grid_item',
 			percentPosition: true,
+			resizable: false,
 			masonry:{
 				columnWidth: container.find('.grid_item').not('.width2x').get(0),
 			}
@@ -233,6 +234,22 @@ var Roots = {
   about_us: {
     init: function() {
       // JavaScript to be fired on the about us page
+	  
+	  $(document).ready(function(){
+		if($(window).outerWidth() >= 992){
+			$('#content_container').height($(window).outerHeight());
+		}else{
+			$('#content_container').css('height','auto');
+		}
+	
+		$(window).resize(function(){
+			if($(window).outerWidth() >= 992){
+				$('#content_container').height($(window).outerHeight());
+			}else{
+				$('#content_container').css('height','auto');
+			}
+		});
+	  });	
     }
   },
   single_portfolio: {
