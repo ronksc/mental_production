@@ -10,7 +10,7 @@
 		//border:1px solid #fff;
 		//margin-right: -1px;
 		//margin-bottom: -2px;
-		overflow:hidden;
+		//overflow:hidden;
 	
 		width:100%;
 		position:relative;
@@ -30,9 +30,9 @@
 				left:0;
 				//border:1px solid #fff;
 				
-				//-webkit-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,1); 
-				//-moz-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,1); 
-				//box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,1);
+				-webkit-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,1); 
+				-moz-box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,1); 
+				box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,1);
 			}*/
 			
 			/*.image_bg{
@@ -164,6 +164,11 @@
 				//margin-right: -2px;
 			}
 			
+			&.width2xheight1x{
+				width:50%;
+				//height:257px;
+			}
+			
 			&:hover{
 				.overlay_wrapper{
 					opacity:1;
@@ -233,11 +238,18 @@
 	.project_grid_container{
 		.grid_item{
 			width:20%;
+			//height:257px;
 			//width:calc(22.5%-1px);
 			
 			&.width2x{
 				width:40%;
+				//height:514px;
 				//width:calc(43%-1px);
+			}
+			
+			&.width2xheight1x{
+				width:40%;
+				//height:257px;
 			}
 			
 			.overlay_wrapper{

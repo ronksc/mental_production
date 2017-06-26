@@ -186,12 +186,19 @@ var Roots = {
 		showHidePopup();
 	 
 		container.isotope({
-			itemSelector: '.grid_item',
+			/*itemSelector: '.grid_item',
 			percentPosition: true,
 			resizable: false,
 			masonry:{
 				columnWidth: container.find('.grid_item').not('.width2x').get(0),
-			}
+			}*/
+			
+			layoutMode: 'packery',
+			/*packery: {
+			  columnWidth: container.find('.grid_item').not('.width2x').get(0),
+			},*/
+			itemSelector: '.grid_item',
+			percentPosition: true
 		});
 			 
 		container.imagesLoaded().progress( function() {

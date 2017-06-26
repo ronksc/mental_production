@@ -105,9 +105,9 @@ function load_portfolio(){
                 <div class="heading">
                   <h3 class="title"><?=get_the_title($post_id); ?></h3>
                   <?php
-                    foreach($term_list as $term):
+                    /*foreach($term_list as $term):
                         echo '<p class="skills">'.$term.'</p>';
-                    endforeach;
+                    endforeach;*/
                   ?>
                 </div>
                 <div class="content">
