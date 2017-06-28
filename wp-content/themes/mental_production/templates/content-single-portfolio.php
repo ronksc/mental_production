@@ -44,9 +44,9 @@ while (have_posts()) : the_post();
                 <div class="heading">
                   <h3 class="title"><?php the_title(); ?></h3>
                   <?php
-                    foreach($term_list as $term):
+                    /*foreach($term_list as $term):
                         echo '<p class="skills">'.$term.'</p>';
-                    endforeach;
+                    endforeach;*/
                   ?>
                 </div>
                 <div class="content">

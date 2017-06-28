@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Contact Form 7 - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-06-12 11:12:52+0000\n"
+"PO-Revision-Date: 2017-06-17 16:31:31+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,7 +22,7 @@ msgstr "刪除聯絡表單時發生錯誤。"
 #: includes/rest-api.php:177 includes/rest-api.php:204
 #: includes/rest-api.php:253
 msgid "You are not allowed to access the requested contact form."
-msgstr "你沒有權限存取請求的聯絡表單。"
+msgstr "您沒有權限存取請求的聯絡表單。"
 
 #: includes/rest-api.php:171 includes/rest-api.php:198
 #: includes/rest-api.php:247 includes/rest-api.php:276
@@ -32,7 +32,7 @@ msgstr "找不到請求的聯絡表單。"
 
 #: includes/rest-api.php:127
 msgid "You are not allowed to create a contact form."
-msgstr "你沒有權限建立聯絡表單。"
+msgstr "您沒有權限建立聯絡表單。"
 
 #: includes/rest-api.php:121
 msgid "Cannot create existing contact form."
@@ -40,19 +40,19 @@ msgstr "無法建立現有聯絡表單。"
 
 #: includes/rest-api.php:64
 msgid "You are not allowed to access contact forms."
-msgstr "你沒有權限存取聯絡表單。"
+msgstr "您沒有權限存取聯絡表單。"
 
 #: includes/config-validator.php:537
 msgid "Attachment file does not exist at %path%."
-msgstr "附件檔案不存在於 %path% 中。"
+msgstr "附件不存在於 %path% 。"
 
 #: includes/config-validator.php:468
 msgid "Invalid mailbox syntax is used in the %name% field."
-msgstr "在 [%name%] 欄位中使用了無效的信箱語法。"
+msgstr "在 %name% 欄位中使用無效的信箱語法。"
 
 #: includes/config-validator.php:379
 msgid "Unavailable names (%names%) are used for form controls."
-msgstr "在表單控制項中採用了不可使用的名稱 [%names%]。"
+msgstr "在表單控制項中不允許使用的名稱（%names%）。"
 
 #: includes/config-validator.php:141
 msgid "There are invalid mail header fields."
@@ -81,7 +81,7 @@ msgstr[0] "偵測到 %s 項設定錯誤"
 
 #: admin/admin.php:319
 msgid "%d configuration errors detected in this tab panel"
-msgstr "在這個標籤面板中偵測到 %d 項設定錯誤"
+msgstr "在此頁籤面板中偵測到 %d 項設定錯誤"
 
 #: admin/admin.php:318
 msgid "1 configuration error detected in this tab panel"
@@ -109,11 +109,11 @@ msgstr "Flamingo"
 
 #: admin/includes/welcome-panel.php:34
 msgid "Install a message storage plugin before this happens to you. %s saves all messages through contact forms into the database. Flamingo is a free WordPress plugin created by the same author as Contact Form 7."
-msgstr "在發生這種狀況前，請安裝個能為你儲存郵件的外掛。Flamingo 是由 Contact Form 7 開發者 Takayuki Miyoshi 所開發的免費 WordPress 外掛，%s 可直接透過聯絡表單將所有郵件儲存到資料庫中。"
+msgstr "在發生這種狀況前，請安裝個能為您儲存郵件的外掛。Flamingo 是由聯絡表單7開發者 Takayuki Miyoshi 所開發的免費 WordPress 外掛，%s 可直接透過聯絡表單將所有郵件儲存到資料庫中。"
 
 #: admin/includes/welcome-panel.php:32
 msgid "Contact Form 7 doesn&#8217;t store submitted messages anywhere. Therefore, you may lose important messages forever if your mail server has issues or you make a mistake in mail configuration."
-msgstr "Contact Form 7 不會儲存已傳送的郵件，所以當郵件伺服器發生問題或郵件設定有了錯誤，便可能永久失去重要郵件。"
+msgstr "聯絡表單7不會儲存已傳送的郵件，所以當郵件伺服器發生問題或郵件設定錯誤時，可能永久失去重要郵件。"
 
 #: admin/includes/welcome-panel.php:30
 msgid "Before you cry over spilt mail&#8230;"
@@ -121,7 +121,7 @@ msgstr "在為錯發的郵件後悔之前&#8230;"
 
 #: admin/includes/welcome-panel.php:26
 msgid "comment blacklist"
-msgstr "留言黑名單"
+msgstr "迴響黑名單"
 
 #: admin/includes/welcome-panel.php:26
 msgid "https://contactform7.com/comment-blacklist/"
@@ -129,27 +129,27 @@ msgstr "https://contactform7.com/comment-blacklist/"
 
 #: admin/includes/welcome-panel.php:26
 msgid "Contact Form 7 supports spam-filtering with %1$s. Intelligent %2$s blocks annoying spambots. Plus, using %3$s, you can block messages containing specified keywords or those sent from specified IP addresses."
-msgstr "Contact Form 7 支援 %1$s 進行垃圾訊息篩選，而智慧型 %2$s 可封鎖惱人的垃圾留言機器人。除此之外，使用%3$s可以阻止包含特定關鍵字或從特定 IP 位址傳送的電子郵件。"
+msgstr "聯絡表單7支援 %1$s 進行垃圾訊息篩選，而智慧型 %2$s 可封鎖惱人的垃圾留言機器人。除此之外，使用%3$s可以阻止包含特定關鍵字或從特定 IP 位址傳送的電子郵件。"
 
 #: admin/includes/welcome-panel.php:24
 msgid "Spammers target everything; your contact forms aren&#8217;t an exception. Before you get spammed, protect your contact forms with the powerful anti-spam features Contact Form 7 provides."
-msgstr "垃圾訊息業者不會放過任何目標，你的聯絡表單也不例外。你可以在收到垃圾訊息前，使用 Contact Form 7 所提供的強大反垃圾訊息功能保護聯絡表單。"
+msgstr "垃圾訊息業者不會放過任何目標，您的聯絡表單也不例外。您可以在收到垃圾訊息前，使用聯絡表單7所提供的強大反垃圾訊息功能保護聯絡表單。"
 
 #: admin/includes/welcome-panel.php:22
 msgid "Getting spammed? You have protection."
-msgstr "收到垃圾訊息？完整的保護在此。"
+msgstr "收到垃圾訊息？您有防護。"
 
 #: includes/config-validator.php:139
 msgid "Multiple form controls are in a single label element."
-msgstr "單一標籤元素中包含多個表單控制項。"
+msgstr "單一標籤元件中包含多個表單控制項。"
 
 #: admin/admin.php:315
 msgid "How to correct this?"
-msgstr "如何進行修正？"
+msgstr "如何修正此項？"
 
 #: admin/admin.php:420
 msgid "FAQ about Configuration Validator"
-msgstr "設定驗證器的常見問題集"
+msgstr "設定驗證器的常見問題"
 
 #: admin/admin.php:420
 msgid "https://contactform7.com/configuration-validator-faq/"
@@ -193,7 +193,7 @@ msgstr "檔案太大。"
 
 #: modules/file.php:200
 msgid "You are not allowed to upload files of this type."
-msgstr "你沒有權限上傳這個類型的檔案。"
+msgstr "您沒有權限上傳這個類型的檔案。"
 
 #: modules/file.php:195
 msgid "There was an unknown error uploading the file."
@@ -225,7 +225,7 @@ msgstr "此為必填欄位。"
 
 #: includes/contact-form-template.php:162
 msgid "You must accept the terms and conditions before sending your message."
-msgstr "傳送郵件前，你必須接受條款及條件。"
+msgstr "傳送郵件前，您必須接受條款及條件。"
 
 #: includes/contact-form-template.php:148
 msgid "One or more fields have an error. Please check and try again."
@@ -238,20 +238,20 @@ msgstr "嘗試傳送郵件時發生錯誤。請稍後再試。"
 
 #: includes/contact-form-template.php:134
 msgid "Thank you for your message. It has been sent."
-msgstr "感謝你的留言，已將留言傳送給站務人員。"
+msgstr "感謝您的留言，已將留言傳送給站務人員。"
 
 #: includes/contact-form-template.php:50 includes/contact-form-template.php:77
 msgctxt "mail subject"
 msgid "%1$s \"%2$s\""
-msgstr "\"%2$s\" (由「%1$s」的聯絡表單所傳送)"
+msgstr "「%2$s」 （由「%1$s」的聯絡表單傳送）"
 
 #: admin/admin.php:607
 msgid "Misconfiguration leads to mail delivery failure or other troubles. Validate your contact forms now."
-msgstr "設定錯誤會導致郵件傳送失敗或其他問題，請立即驗證你的聯繫表單。"
+msgstr "設定錯誤會導致郵件傳送失敗或其他問題，請立即驗證您的聯繫表單。"
 
 #: admin/admin.php:605
 msgid "Validate Contact Form 7 Configuration"
-msgstr "驗證 Contact Form 7 的設定"
+msgstr "驗證聯絡表單7的設定"
 
 #: includes/config-validator.php:16
 msgid "https://contactform7.com/configuration-errors/"
@@ -277,15 +277,15 @@ msgstr[0] "立即驗證 %s 份聯絡表單"
 
 #: admin/admin.php:212
 msgid "You are not allowed to validate configuration."
-msgstr "你沒有權限驗證設定。"
+msgstr "您沒有權限驗證設定。"
 
 #: includes/controller.php:65
 msgid "Please verify that you are not a robot."
-msgstr "請證明你不是機器人。"
+msgstr "請驗證您不是機器人。"
 
 #: modules/recaptcha.php:467
 msgid "Compact"
-msgstr "小巧"
+msgstr "壓縮"
 
 #: modules/recaptcha.php:465
 msgid "Normal"
@@ -309,11 +309,11 @@ msgstr "佈景主題"
 
 #: modules/recaptcha.php:449
 msgid "Generate a form-tag for a reCAPTCHA widget. For more details, see %s."
-msgstr "為 reCAPTCHA 小工具產生表單標籤。如需詳細資訊，請參閱%s。"
+msgstr "為 reCAPTCHA 小工具產生表單標籤。瞭解更多資訊，請參閱%s。"
 
 #: modules/recaptcha.php:441
 msgid "To use reCAPTCHA, first you need to install an API key pair. For more details, see %s."
-msgstr "請先安裝 API 金鑰組，才能使用 reCAPTCHA。如需詳細資訊，請參閱 %s。"
+msgstr "請先安裝 API 金鑰組，才能使用 reCAPTCHA。瞭解詳細資訊，請參閱 %s。"
 
 #: admin/includes/welcome-panel.php:26 modules/recaptcha.php:189
 #: modules/recaptcha.php:441 modules/recaptcha.php:451
@@ -342,7 +342,7 @@ msgstr "秘密金鑰"
 
 #: modules/recaptcha.php:170 modules/recaptcha.php:201
 msgid "Site Key"
-msgstr "網站金鑰"
+msgstr "站台金鑰"
 
 #: modules/recaptcha.php:155
 msgid "reCAPTCHA is a free service to protect your website from spam and abuse."
@@ -368,7 +368,7 @@ msgstr "reCAPTCHA"
 
 #: modules/really-simple-captcha.php:236
 msgid "CAPTCHA (Really Simple CAPTCHA)"
-msgstr "CAPTCHA 驗證 (Really Simple CAPTCHA)"
+msgstr "CAPTCHA 驗證（Really Simple CAPTCHA）"
 
 #. Author URI of the plugin/theme
 msgid "https://ideasilo.wordpress.com/"
@@ -380,7 +380,7 @@ msgstr "Takayuki Miyoshi"
 
 #. Description of the plugin/theme
 msgid "Just another contact form plugin. Simple but flexible."
-msgstr "簡單靈活的聯絡表單外掛。繁體中文本地化由「<a href=\"https://www.alexclassroom.com/\" target=\"_blank\">阿力獅的教室</a>」站長<a href=\"https://www.facebook.com/captain.alexlion\" target=\"_blank\">阿力獅</a>提供。"
+msgstr "簡單靈活的聯絡表單外掛。"
 
 #. Plugin URI of the plugin/theme
 msgid "https://contactform7.com/"
@@ -392,7 +392,7 @@ msgstr "聯絡表單 %d"
 
 #: modules/textarea.php:134
 msgid "Generate a form-tag for a multi-line text input field. For more details, see %s."
-msgstr "為多行文字輸入欄位產生表單標籤。如需詳細資訊，請參閱%s。"
+msgstr "為多行文字輸入欄位產生表單標籤。瞭解詳細資訊，請參閱%s。"
 
 #: modules/textarea.php:126
 msgid "text area"
@@ -425,23 +425,23 @@ msgstr "https://contactform7.com/text-fields/"
 
 #: modules/text.php:230
 msgid "Generate a form-tag for a single-line telephone number input field. For more details, see %s."
-msgstr "為單行電話號碼輸入欄位產生表單標籤。如需詳細資訊，請參閱%s。"
+msgstr "為單行電話號碼輸入欄位產生表單標籤。瞭解詳細資訊，請參閱%s。"
 
 #: modules/text.php:228
 msgid "Generate a form-tag for a single-line URL input field. For more details, see %s."
-msgstr "為單行網址輸入欄位產生表單標籤。如需詳細資訊，請參閱%s。"
+msgstr "為單行網址輸入欄位產生表單標籤。瞭解詳細資訊，請參閱%s。"
 
 #: modules/text.php:226
 msgid "Generate a form-tag for a single-line email address input field. For more details, see %s."
-msgstr "為單行電子郵件地址輸入欄位產生表單標籤。如需詳細資訊，請參閱%s。"
+msgstr "為單行電子郵件地址輸入欄位產生表單標籤。瞭解詳細資訊，請參閱%s。"
 
 #: modules/text.php:224
 msgid "Generate a form-tag for a single-line plain text input field. For more details, see %s."
-msgstr "為單行純文字輸入欄位產生表單標籤。如需詳細資訊，請參閱%s。"
+msgstr "為單行純文字輸入欄位產生表單標籤。瞭解詳細資訊，請參閱%s。"
 
 #: modules/text.php:211
 msgid "tel"
-msgstr "電話號碼"
+msgstr "電話"
 
 #: modules/text.php:209
 msgid "URL"
@@ -473,7 +473,7 @@ msgstr "按鈕文字"
 
 #: modules/submit.php:55
 msgid "Submit Button"
-msgstr "提交按鈕"
+msgstr "送出按鈕"
 
 #: modules/submit.php:55
 msgid "https://contactform7.com/submit-button/"
@@ -481,11 +481,11 @@ msgstr "https://contactform7.com/submit-button/"
 
 #: modules/submit.php:53
 msgid "Generate a form-tag for a submit button. For more details, see %s."
-msgstr "為提交按鈕產生表單標籤。如需詳細資訊，請參閱%s。"
+msgstr "為送出按鈕產生表單標籤。瞭解詳細資訊，請參閱%s。"
 
 #: modules/submit.php:46
 msgid "submit"
-msgstr "提交按鈕"
+msgstr "送出按鈕"
 
 #: modules/select.php:219
 msgid "Insert a blank item as the first option"
@@ -497,7 +497,7 @@ msgstr "允許多重選取"
 
 #: modules/select.php:185
 msgid "Generate a form-tag for a drop-down menu. For more details, see %s."
-msgstr "為下拉式選單產生表單標籤。如需詳細資訊，請參閱%s。"
+msgstr "為下拉式選單產生表單標籤。瞭解詳細資訊，請參閱%s。"
 
 #: modules/select.php:178
 msgid "drop-down menu"
@@ -509,7 +509,7 @@ msgstr "每行一組問題與答案，問題與答案以直立線符號 | 進行
 
 #: modules/quiz.php:201 modules/quiz.php:204
 msgid "Questions and answers"
-msgstr "問題與答案"
+msgstr "問與答"
 
 #: modules/quiz.php:186
 msgid "Quiz"
@@ -521,7 +521,7 @@ msgstr "https://contactform7.com/quiz/"
 
 #: modules/quiz.php:184
 msgid "Generate a form-tag for a question-answer pair. For more details, see %s."
-msgstr "為問答題產生表單標籤。如需詳細資訊，請參閱%s。"
+msgstr "為問答題產生表單標籤。瞭解詳細資訊，請參閱%s。"
 
 #: modules/quiz.php:176
 msgid "quiz"
@@ -549,7 +549,7 @@ msgstr "https://contactform7.com/number-fields/"
 
 #: modules/number.php:151
 msgid "Generate a form-tag for a field for numeric value input. For more details, see %s."
-msgstr "為數值輸入欄位產生表單標籤。如需詳細資訊，請參閱%s。"
+msgstr "為數值輸入欄位產生表單標籤。瞭解詳細資訊，請參閱%s。"
 
 #: modules/number.php:143
 msgid "number"
@@ -569,11 +569,11 @@ msgstr "寄件者輸入了無效的數值格式"
 
 #: modules/file.php:316
 msgid "This contact form contains file uploading fields, but the temporary folder for the files (%s) does not exist or is not writable. You can create the folder or change its permission manually."
-msgstr "這份聯絡表單中包含了檔案上傳欄位，但是檔案 [%s] 的暫存資料夾並不存在或無法寫入。你可以透過手動建立資料夾或修改資料夾權限設定來修正這個問題。"
+msgstr "這份聯絡表單中包含了檔案上傳欄位，但是檔案 [%s] 的暫存資料夾並不存在或無法寫入。您可以透過手動建立資料夾或修改資料夾權限設定來修正這個問題。"
 
 #: modules/file.php:290
 msgid "To attach the file uploaded through this field to mail, you need to insert the corresponding mail-tag (%s) into the File Attachments field on the Mail tab."
-msgstr "要透過這個欄位將上傳的檔案附加至郵件中，你必須在 [郵件] 設定頁裡，將對應的郵件標籤 %s 插入 [檔案附件] 欄位中。"
+msgstr "要透過這個欄位將上傳的檔案附加至郵件中，您必須在 [郵件] 設定頁裡，將對應的郵件標籤 %s 插入 [檔案附件] 欄位中。"
 
 #: modules/file.php:262
 msgid "Acceptable file types"
@@ -581,7 +581,7 @@ msgstr "可接受的檔案類型"
 
 #: modules/file.php:257
 msgid "File size limit (bytes)"
-msgstr "檔案大小限制 (單位為位元組 byte)"
+msgstr "檔案大小限制（位元組）"
 
 #: modules/file.php:232
 msgid "File Uploading and Attachment"
@@ -593,11 +593,11 @@ msgstr "https://contactform7.com/file-uploading-and-attachment/"
 
 #: modules/file.php:230
 msgid "Generate a form-tag for a file uploading field. For more details, see %s."
-msgstr "為檔案上傳欄位產生表單標籤。如需詳細資訊，請參閱%s。"
+msgstr "為檔案上傳欄位產生表單標籤。瞭解詳細資訊，請參閱%s。"
 
 #: modules/file.php:222
 msgid "file"
-msgstr "檔案上傳"
+msgstr "檔案"
 
 #: modules/file.php:209
 msgid "Uploading a file fails for PHP error"
@@ -648,7 +648,7 @@ msgstr "https://contactform7.com/date-field/"
 
 #: modules/date.php:148
 msgid "Generate a form-tag for a date input field. For more details, see %s."
-msgstr "為日期輸入欄位產生表單標籤。如需詳細資訊，請參閱%s。"
+msgstr "為日期輸入欄位產生表單標籤。瞭解詳細資訊，請參閱%s。"
 
 #: modules/date.php:140
 msgid "date"
@@ -677,7 +677,7 @@ msgstr "使核取方塊成為單選"
 
 #: modules/checkbox.php:331
 msgid "Wrap each item with label element"
-msgstr "將 label 元素套用至選項文字 "
+msgstr "將標籤元件套用至選項文字 "
 
 #: modules/checkbox.php:330
 msgid "Put a label first, a checkbox last"
@@ -711,11 +711,11 @@ msgstr "https://contactform7.com/checkboxes-radio-buttons-and-menus/"
 
 #: modules/checkbox.php:294
 msgid "Generate a form-tag for a group of radio buttons. For more details, see %s."
-msgstr "為一組選項按鈕產生表單標籤。如需詳細資訊，請參閱%s。"
+msgstr "為一組選項按鈕產生表單標籤。瞭解詳細資訊，請參閱%s。"
 
 #: modules/checkbox.php:292
 msgid "Generate a form-tag for a group of checkboxes. For more details, see %s."
-msgstr "為一組核取方塊產生表單標籤。如需詳細資訊，請參閱%s。"
+msgstr "為一組核取方塊產生表單標籤。瞭解詳細資訊，請參閱%s。"
 
 #: modules/checkbox.php:279
 msgid "radio buttons"
@@ -727,11 +727,11 @@ msgstr "核取方塊"
 
 #: modules/really-simple-captcha.php:346
 msgid "This contact form contains CAPTCHA fields, but the necessary libraries (GD and FreeType) are not available on your server."
-msgstr "這份聯絡表單中使用了 CAPTCHA 驗證欄位，但你的伺服器並未提供必要的 GD 以及 FreeType 函式庫。"
+msgstr "這份聯絡表單中使用了 CAPTCHA 驗證欄位，但您的伺服器並未提供必要的 GD 以及 FreeType 函式庫。"
 
 #: modules/really-simple-captcha.php:340
 msgid "This contact form contains CAPTCHA fields, but the temporary folder for the files (%s) does not exist or is not writable. You can create the folder or change its permission manually."
-msgstr "這份聯絡表單中使用了 CAPTCHA 驗證欄位，但是檔案 [%s] 的暫存資料夾並不存在或無法寫入。你可以透過手動建立資料夾或修改資料夾權限設定來修正這個問題。"
+msgstr "這份聯絡表單中使用了 CAPTCHA 驗證欄位，但是檔案 [%s] 的暫存資料夾並不存在或無法寫入。您可以透過手動建立資料夾或修改資料夾權限設定來修正這個問題。"
 
 #: modules/really-simple-captcha.php:289
 msgid "Input field settings"
@@ -747,11 +747,11 @@ msgstr "https://contactform7.com/captcha/"
 
 #: modules/really-simple-captcha.php:255
 msgid "Generate form-tags for a CAPTCHA image and corresponding response input field. For more details, see %s."
-msgstr "為 CAPTCHA 驗證圖片及其對應的回應輸入欄位產生表單標籤。如需詳細資訊，請參閱%s。"
+msgstr "為 CAPTCHA 驗證圖片及其對應的回應輸入欄位產生表單標籤。瞭解詳細資訊，請參閱%s。"
 
 #: modules/really-simple-captcha.php:247
 msgid "To use CAPTCHA, you first need to install and activate %s plugin."
-msgstr "你需要安裝並啟用 %s 外掛，才能使用驗證功能。"
+msgstr "您需要安裝並啟用 %s 外掛，才能使用驗證功能。"
 
 #: modules/really-simple-captcha.php:257 modules/recaptcha.php:223
 msgid "CAPTCHA"
@@ -759,7 +759,7 @@ msgstr "CAPTCHA 驗證"
 
 #: modules/really-simple-captcha.php:217
 msgid "Your entered code is incorrect."
-msgstr "你輸入的認證碼不正確。"
+msgstr "您輸入的認證碼不正確。"
 
 #: modules/really-simple-captcha.php:215
 msgid "The code that sender entered does not match the CAPTCHA"
@@ -787,11 +787,11 @@ msgstr "類別屬性"
 #: modules/recaptcha.php:485 modules/select.php:225 modules/submit.php:70
 #: modules/text.php:293 modules/textarea.php:167
 msgid "Id attribute"
-msgstr "ID 屬性"
+msgstr "識別碼屬性"
 
 #: modules/acceptance.php:171
 msgid "Make this work inversely"
-msgstr "未核取選項仍能提交表單"
+msgstr "未核取選項仍能送出表單"
 
 #: modules/acceptance.php:170
 msgid "Make this checkbox checked by default"
@@ -820,7 +820,7 @@ msgstr "https://contactform7.com/acceptance-checkbox/"
 
 #: modules/acceptance.php:149
 msgid "Generate a form-tag for an acceptance checkbox. For more details, see %s."
-msgstr "為接受度核取方塊產生表單標籤。如需詳細資訊，請參閱%s。"
+msgstr "為接受度核取方塊產生表單標籤。瞭解詳細資訊，請參閱%s。"
 
 #: modules/acceptance.php:141
 msgid "acceptance"
@@ -856,7 +856,7 @@ msgstr "當寄件者必須接受相關條款時"
 
 #: includes/contact-form-template.php:153
 msgid "Submission was referred to as spam"
-msgstr "提交內容遭判定為垃圾郵件"
+msgstr "送出內容遭判定為垃圾郵件"
 
 #: includes/contact-form-template.php:146
 msgid "Validation errors occurred"
@@ -876,15 +876,15 @@ msgstr "這封電子郵件由「%1$s」的聯絡表單所傳送，網站網址�
 
 #: includes/contact-form-template.php:58 includes/contact-form-template.php:82
 msgid "Message Body:"
-msgstr "郵件本文:"
+msgstr "郵件本文："
 
 #: includes/contact-form-template.php:56
 msgid "Subject: %s"
-msgstr "主旨: %s"
+msgstr "主旨： %s"
 
 #: includes/contact-form-template.php:54
 msgid "From: %s"
-msgstr "寄件者: %s"
+msgstr "寄件者： %s"
 
 #: includes/contact-form-template.php:42 modules/submit.php:26
 msgid "Send"
@@ -892,63 +892,63 @@ msgstr "傳送"
 
 #: includes/contact-form-template.php:41
 msgid "Your Message"
-msgstr "你的訊息"
+msgstr "您的訊息"
 
 #: includes/contact-form-template.php:39
 msgid "Your Email"
-msgstr "你的電子郵件"
+msgstr "您的電子郵件"
 
 #: includes/contact-form-template.php:37
 msgid "(required)"
-msgstr "(必填)"
+msgstr "（必填）"
 
 #: includes/contact-form-template.php:38
 msgid "Your Name"
-msgstr "你的姓名"
+msgstr "您的名稱"
 
 #: admin/includes/tag-generator.php:44
 msgid "Form-tag Generator: %s"
-msgstr "表單標籤產生器: %s"
+msgstr "表單標籤產生器： %s"
 
 #: admin/includes/help-tabs.php:91
 msgid "For more information:"
-msgstr "瞭解更多資訊:"
+msgstr "瞭解更多資訊："
 
 #: admin/includes/help-tabs.php:83
 msgid "Any information you provide will not be shared with service providers without your authorization."
-msgstr "你所提供的任何資訊，未經當事人授權，不會分享給服務提供者。"
+msgstr "您所提供的任何資訊，未經當事人授權，不會分享給服務提供者。"
 
 #: admin/includes/help-tabs.php:82
 msgid "You may need to first sign up for an account with the service that you plan to use. When you do so, you would need to authorize Contact Form 7 to access the service with your account."
-msgstr "你必須先向計畫採用的服務註冊一個帳號。註冊成功後，請授權 Contact Form 7 以你的帳號存取該項服務。"
+msgstr "您必須先向計畫採用的服務註冊一個帳號。註冊成功後，請授權聯絡表單7以您的帳號存取該項服務。"
 
 #: admin/includes/help-tabs.php:81
 msgid "On this screen, you can manage services that are available through Contact Form 7. Using API will allow you to collaborate with any services that are available."
-msgstr "在這個畫面中，你可以透過 Contact Form 7 管理可用的服務。使用 API 可讓你與任何可用的服務進行協同作業。"
+msgstr "在這個畫面中，您可以透過聯絡表單7管理可用的服務。使用 API 可讓您與任何可用的服務進行協同作業。"
 
 #: admin/includes/help-tabs.php:79
 msgid "There are also special mail-tags that have specific names, but don&#8217;t have corresponding form-tags. They are used to represent meta information of form submissions like the submitter&#8217;s IP address or the URL of the page."
-msgstr "有些含有指定名稱的特殊郵件標籤，並沒有對應的表單標籤。這些特殊郵件標籤用於顯示表單提交的中繼資訊，例如提交者的 IP 地址或頁面網址。"
+msgstr "有些含有指定名稱的特殊郵件標籤，並沒有對應的表單標籤。這些特殊郵件標籤用於顯示表單送出的中繼資訊，例如送出者的 IP 地址或頁面網址。"
 
 #: admin/includes/help-tabs.php:78
 msgid "A mail-tag is also a short code enclosed in square brackets that you can use in every Mail and Mail (2) field. A mail-tag represents a user input value through an input field of a corresponding form-tag."
-msgstr "郵件標籤就是用於 [郵件] 與 [郵件 (2)] 各個欄位中以方括弧括住的短代碼。郵件標籤透過對應的表單標籤輸入欄位，將使用者輸入的值顯示出來。"
+msgstr "郵件標籤就是用於[郵件]與 [郵件 (2)] 各個欄位中以方括弧括住的短代碼。郵件標籤透過對應的表單標籤輸入欄位，將使用者輸入的值顯示出來。"
 
 #: admin/includes/help-tabs.php:76
 msgid "While form-tags have a comparatively complex syntax, you don&#8217;t need to know the syntax to add form-tags because you can use the straightforward tag generator (<strong>Generate Tag</strong> button on this screen)."
-msgstr "雖然表單標籤具備相對複雜的語法，但你無須掌握新增表單標籤的語法，因為你可以透過簡單易用的標籤產生器產生表單標籤。在這個畫面上，那一整列的按鈕代表不同類型的<strong>表單標籤產生器</strong>。"
+msgstr "雖然表單標籤具備相對複雜的語法，但您無須掌握新增表單標籤的語法，因為您可以透過簡單易用的標籤產生器產生表單標籤。在這個畫面上，那一整列的按鈕代表不同類型的<strong>表單標籤產生器</strong>。"
 
 #: admin/includes/help-tabs.php:75
 msgid "A form-tag is a short code enclosed in square brackets used in a form content. A form-tag generally represents an input field, and its components can be separated into four parts: type, name, options, and values. Contact Form 7 supports several types of form-tags including text fields, number fields, date fields, checkboxes, radio buttons, menus, file-uploading fields, CAPTCHAs, and quiz fields."
-msgstr "表單標籤就是用於表單內容中以方括弧括住的短代碼。表單標籤一般顯示為輸入欄位，其構成分為四個部分: 類型、名稱、選項及欄位的值。Contact Form 7 支援各種類型的表單標籤，包含文字欄位、數值欄位、日期欄位、核取方塊、選項按鈕、選單、檔案上傳欄位、CAPTCHA 驗證以及問答題欄位。"
+msgstr "表單標籤就是用於表單內容中以方括弧括住的短代碼。表單標籤一般顯示為輸入欄位，其構成分為四個部分: 類型、名稱、選項及欄位的值。聯絡表單7支援各種類型的表單標籤，包含文字欄位、數值欄位、日期欄位、核取方塊、選項按鈕、選單、檔案上傳欄位、CAPTCHA 驗證以及問答題欄位。"
 
 #: admin/includes/help-tabs.php:73
 msgid "<strong>Additional Settings</strong> provides a place where you can customize the behavior of this contact form by adding code snippets."
-msgstr "<strong>[其他設定]</strong> 提供了一個可以讓你新增程式碼片段以便自訂聯絡表單行為的欄位。"
+msgstr "<strong>[其他設定]</strong> 提供了一個可以讓您新增程式碼片段以便自訂聯絡表單行為的欄位。"
 
 #: admin/includes/help-tabs.php:72
 msgid "In <strong>Messages</strong>, you can edit various types of messages used for this contact form. These messages are relatively short messages, like a validation error message you see when you leave a required field blank."
-msgstr "在 <strong>[訊息]</strong> 設定頁中，可以編輯用於該份聯絡表單的各項訊息。這些都是相對較短的訊息，類似你在必填欄位留空時看到的驗證錯誤訊息。"
+msgstr "在 <strong>[訊息]</strong> 設定頁中，可以編輯用於該份聯絡表單的各項訊息。這些都是相對較短的訊息，類似您在必填欄位留空時看到的驗證錯誤訊息。"
 
 #: admin/includes/help-tabs.php:71
 msgid "<strong>Mail (2)</strong> is an additional mail template that works similar to Mail. Mail (2) is different in that it is sent only when Mail has been sent successfully."
@@ -956,11 +956,11 @@ msgstr "<strong>[郵件 (2)]</strong> 是與 [郵件] 運作方式相仿的郵�
 
 #: admin/includes/help-tabs.php:70
 msgid "<strong>Mail</strong> manages a mail template (headers and message body) that this contact form will send when users submit it. You can use Contact Form 7&#8217;s mail-tags here."
-msgstr "在 <strong>[郵件]</strong> 設定頁中，可管理使用者提交表單後，聯絡表單會寄送給收件者的郵件範本 (即郵件標題與本文)。你也可以在這裡使用 Contact Form 7 的郵件標籤。"
+msgstr "在 <strong>[郵件]</strong> 設定頁中，可管理使用者送出表單後，聯絡表單會寄送給收件者的郵件範本 (即郵件標題與本文)。您也可以在這裡使用聯絡表單7的郵件標籤。"
 
 #: admin/includes/help-tabs.php:69
 msgid "<strong>Form</strong> is a content of HTML form. You can use arbitrary HTML, which is allowed inside a form element. You can also use Contact Form 7&#8217;s form-tags here."
-msgstr "<strong>[表單]</strong> 設定頁儲存了 HTML 表單的內容。在這個設定頁中，你可以使用所有可用於 form 元素的 HTML 標籤，也可以使用 Contact Form 7 的表單標籤。"
+msgstr "<strong>[表單]</strong> 設定頁儲存了 HTML 表單的內容。在這個設定頁中，您可以使用所有可用於 form 元件的 HTML 標籤，也可以使用聯絡表單7的表單標籤。"
 
 #: admin/includes/help-tabs.php:68
 msgid "<strong>Title</strong> is the title of a contact form. This title is only used for labeling a contact form, and can be edited."
@@ -968,7 +968,7 @@ msgstr "<strong>[標題]</strong> 就是聯絡表單的標題。標題僅用於�
 
 #: admin/includes/help-tabs.php:67
 msgid "On this screen, you can edit a contact form. A contact form is comprised of the following components:"
-msgstr "在這個畫面中，你可以編輯聯絡表單。每份聯絡表單均由以下項目所組成:"
+msgstr "在這個畫面中，您可以編輯聯絡表單。每份聯絡表單均由以下項目所組成:"
 
 #: admin/includes/help-tabs.php:65
 msgid "<strong>Duplicate</strong> - Clones that contact form. A cloned contact form inherits all content from the original, but has a different ID."
@@ -976,15 +976,15 @@ msgstr "<strong>[複製]</strong> 功能 - 複製聯絡表單。複製出來的�
 
 #: admin/includes/help-tabs.php:64
 msgid "<strong>Edit</strong> - Navigates to the editing screen for that contact form. You can also reach that screen by clicking on the contact form title."
-msgstr "<strong>[編輯]</strong> 功能 - 瀏覽至聯絡表單的編輯畫面。你也可以按一下聯絡表單的標題進入編輯畫面。"
+msgstr "<strong>[編輯]</strong> 功能 - 瀏覽至聯絡表單的編輯畫面。您也可以按一下聯絡表單的標題進入編輯畫面。"
 
 #: admin/includes/help-tabs.php:63
 msgid "Hovering over a row in the contact forms list will display action links that allow you to manage your contact form. You can perform the following actions:"
-msgstr "將游標停駐於聯絡表單清單任一列上，便會顯示管理聯絡表單的操作連結。你可以進行以下操作:"
+msgstr "將游標停駐於聯絡表單清單任一列上，便會顯示管理聯絡表單的操作連結。您可以進行以下操作:"
 
 #: admin/includes/help-tabs.php:61
 msgid "On this screen, you can manage contact forms provided by Contact Form 7. You can manage an unlimited number of contact forms. Each contact form has a unique ID and Contact Form 7 shortcode ([contact-form-7 ...]). To insert a contact form into a post or a text widget, insert the shortcode into the target."
-msgstr "在這個畫面中，你可以管理 Contact Form 7 所提供的聯絡表單，且無管理數量限制。每份聯絡表單均包含唯一 ID 及 Contact Form 7 短代碼 ([contact-form-7 ...])。要在文章或文字小工具中插入聯絡表單，僅需將短代碼插入適當位置即可。"
+msgstr "在這個畫面中，您可以管理聯絡表單7所提供的聯絡表單，且無管理數量限制。每份聯絡表單均包含唯一 ID 及聯絡表單7短代碼 ([contact-form-7 ...])。要在文章或文字小工具中插入聯絡表單，僅需將短代碼插入適當位置即可。"
 
 #: admin/includes/help-tabs.php:40
 msgid "Mail-tags"
@@ -1005,7 +1005,7 @@ msgstr "概觀"
 
 #: admin/includes/editor.php:218
 msgid "You can add customization code snippets here. For details, see %s."
-msgstr "你可以在這裡新增自訂程式碼片段。如需詳細資訊，請參閱%s。"
+msgstr "您可以在這裡新增自訂程式碼片段。瞭解詳細資訊，請參閱%s。"
 
 #: admin/includes/editor.php:216
 msgid "https://contactform7.com/additional-settings/"
@@ -1053,7 +1053,7 @@ msgstr "在下方欄位中，可以使用以下郵件標籤:"
 
 #: admin/includes/editor.php:109
 msgid "Mail (2) is an additional mail template often used as an autoresponder."
-msgstr "[郵件 (2)] 是另一個郵件範本，通常用於自動回覆指定訊息給提交表單的使用者。"
+msgstr "[郵件 (2)] 是另一個郵件範本，通常用於自動回覆指定訊息給送出表單的使用者。"
 
 #: admin/includes/editor.php:75
 msgid "Use Mail (2)"
@@ -1065,7 +1065,7 @@ msgstr "郵件 (2)"
 
 #: admin/includes/class-contact-forms-list-table.php:214
 msgid "Y/m/d"
-msgstr "Y/n/j"
+msgstr "Y/m/d"
 
 #: admin/includes/class-contact-forms-list-table.php:212
 msgid "%s ago"
@@ -1073,11 +1073,11 @@ msgstr "%s前"
 
 #: admin/includes/class-contact-forms-list-table.php:202
 msgid "Y/m/d g:i:s A"
-msgstr "Y/n/j a g:i:s"
+msgstr "Y/ｍ/d a g:i:s"
 
 #: admin/includes/class-contact-forms-list-table.php:116
 msgid "Edit &#8220;%s&#8221;"
-msgstr "編輯 &#8220;%s&#8221;"
+msgstr "編輯 &#12300;%s&#12301;"
 
 #: admin/includes/class-contact-forms-list-table.php:144
 msgid "Edit"
@@ -1106,7 +1106,7 @@ msgstr "其他設定"
 
 #: admin/edit-contact-form.php:210
 msgid "Additional Settings (%d)"
-msgstr "其他設定 (%d)"
+msgstr "其他設定（%d）"
 
 #: admin/edit-contact-form.php:199 admin/includes/editor.php:192
 msgid "Messages"
@@ -1126,7 +1126,7 @@ msgstr "%s 索引鍵切換面板"
 
 #: admin/edit-contact-form.php:174 admin/includes/help-tabs.php:94
 msgid "Support"
-msgstr "技術支援"
+msgstr "支援"
 
 #: admin/edit-contact-form.php:174 admin/includes/help-tabs.php:94
 msgid "https://contactform7.com/support/"
@@ -1134,7 +1134,7 @@ msgstr "https://contactform7.com/support/"
 
 #: admin/edit-contact-form.php:173 admin/includes/help-tabs.php:93
 msgid "FAQ"
-msgstr "常見問題集"
+msgstr "常見問題"
 
 #: admin/edit-contact-form.php:173 admin/includes/help-tabs.php:93
 msgid "https://contactform7.com/faq/"
@@ -1150,15 +1150,15 @@ msgstr "https://contactform7.com/docs/"
 
 #: admin/edit-contact-form.php:169
 msgid "Information"
-msgstr "相關資訊"
+msgstr "資訊"
 
 #: admin/edit-contact-form.php:153
 msgid ""
 "You are about to delete this contact form.\n"
 "  'Cancel' to stop, 'OK' to delete."
 msgstr ""
-"你即將刪除這份聯絡表單。\n"
-"按一下 [取消] 以停止操作，按一下 [確定] 以刪除。"
+"您即將刪除這份聯絡表單。\n"
+"按一下「取消」停止操作，「確定」刪除。"
 
 #: admin/edit-contact-form.php:153
 #: admin/includes/class-contact-forms-list-table.php:92
@@ -1176,11 +1176,11 @@ msgstr "狀態"
 
 #: admin/edit-contact-form.php:110
 msgid "You can also use this old-style shortcode:"
-msgstr "你也可使用舊式短代碼:"
+msgstr "您也可使用舊式短代碼："
 
 #: admin/edit-contact-form.php:103
 msgid "Copy this shortcode and paste it into your post, page, or text widget content:"
-msgstr "將這個短代碼複製到你的文章、頁面或文字小工具中:"
+msgstr "將這個短代碼複製到您的文章、頁面或文字小工具中："
 
 #: admin/edit-contact-form.php:81
 msgid "Enter title here"
@@ -1193,7 +1193,7 @@ msgstr "儲存"
 
 #: admin/admin.php:576
 msgid "You are not allowed to edit this contact form."
-msgstr "你沒有權限編輯這份聯絡表單。"
+msgstr "您沒有權限編輯這份聯絡表單。"
 
 #: admin/includes/welcome-panel.php:34
 msgid "https://contactform7.com/save-submitted-messages-with-flamingo/"
@@ -1209,7 +1209,7 @@ msgstr "解除"
 
 #: admin/admin.php:558
 msgid "<strong>Contact Form 7 %1$s requires WordPress %2$s or higher.</strong> Please <a href=\"%3$s\">update WordPress</a> first."
-msgstr "<strong>Contact Form 7 %1$s 需要 WordPress %2$s 版或更新版本</strong>，請先<a href=\"%3$s\">更新 WordPress</a>。"
+msgstr "<strong>聯絡表單7%1$s 需要 WordPress %2$s 版或更新版本</strong>，請先<a href=\"%3$s\">更新 WordPress</a>。"
 
 #: admin/admin.php:540
 msgid "Settings"
@@ -1233,11 +1233,11 @@ msgstr "搜尋聯絡表單"
 
 #: admin/admin.php:377
 msgid "Search results for &#8220;%s&#8221;"
-msgstr "&#8220;%s&#8221; 的搜尋結果"
+msgstr "&#12300;%s&#12301;的搜尋結果"
 
 #: admin/admin.php:308
 msgid "The changes you made will be lost if you navigate away from this page."
-msgstr "如果你離開此頁面，將失去所做更改。"
+msgstr "如果您離開此頁面，將失去所做更改。"
 
 #: admin/admin.php:189
 msgid "Error in deleting."
@@ -1245,11 +1245,11 @@ msgstr "刪除時發生錯誤。"
 
 #: admin/admin.php:185
 msgid "You are not allowed to delete this item."
-msgstr "你沒有權限刪除這個項目。"
+msgstr "您沒有權限刪除這個項目。"
 
 #: admin/admin.php:79 admin/admin.php:143
 msgid "You are not allowed to edit this item."
-msgstr "你沒有權限編輯這個項目。"
+msgstr "您沒有權限編輯這個項目。"
 
 #: admin/admin.php:48
 msgid "Integration"
@@ -1283,4 +1283,4 @@ msgstr "聯絡表單"
 #. Plugin Name of the plugin/theme
 #: admin/admin.php:21 modules/flamingo.php:150
 msgid "Contact Form 7"
-msgstr "Contact Form 7"
+msgstr "聯絡表單7"
